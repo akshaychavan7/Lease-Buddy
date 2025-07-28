@@ -1,132 +1,332 @@
 "use client"
 
-import { Box, Typography, Paper, Chip, Grid, Button, Divider } from "@mui/material"
-import { Person, Business, LocationOn, DateRange, Email, Phone, Refresh, CheckCircle } from "@mui/icons-material"
+import { Box, Typography, Paper, Button, Stack, Card, Avatar } from "@mui/material"
+import { Person, LocationOn, Refresh, AttachMoney, Security, CalendarMonth, CalendarToday } from "@mui/icons-material"
 
 interface EntityDisplayProps {
-  entities: {
-    PERSON: string[]
-    ORGANIZATION: string[]
-    LOCATION: string[]
-    DATE: string[]
-    EMAIL: string[]
-    PHONE: string[]
-  }
+  entities: Record<string, string[]>
   filename: string
   onReset: () => void
 }
 
+// Enhanced entity configuration with more specific icons and descriptions
 const entityConfig = {
-  PERSON: { icon: Person, color: "primary", label: "People" },
-  ORGANIZATION: { icon: Business, color: "secondary", label: "Organizations" },
-  LOCATION: { icon: LocationOn, color: "success", label: "Locations" },
-  DATE: { icon: DateRange, color: "info", label: "Dates" },
-  EMAIL: { icon: Email, color: "warning", label: "Email Addresses" },
-  PHONE: { icon: Phone, color: "error", label: "Phone Numbers" },
+  LESSOR_NAME: { 
+    icon: Person, 
+    color: "primary", 
+    label: "Landlord",
+    description: "Property owner/lessor"
+  },
+  LESSEE_NAME: { 
+    icon: Person, 
+    color: "secondary", 
+    label: "Tenant",
+    description: "Property renter/lessee"
+  },
+  PROPERTY_ADDRESS: { 
+    icon: LocationOn, 
+    color: "success", 
+    label: "Property Address",
+    description: "Location of rental property"
+  },
+  LEASE_START_DATE: { 
+    icon: CalendarToday, 
+    color: "info", 
+    label: "Lease Starts",
+    description: "Agreement start date"
+  },
+  LEASE_END_DATE: { 
+    icon: CalendarMonth, 
+    color: "info", 
+    label: "Lease Ends",
+    description: "Agreement end date"
+  },
+  RENT_AMOUNT: { 
+    icon: AttachMoney, 
+    color: "warning", 
+    label: "Monthly Rent",
+    description: "Regular monthly payment"
+  },
+  SECURITY_DEPOSIT_AMOUNT: { 
+    icon: Security, 
+    color: "error", 
+    label: "Security Deposit",
+    description: "Refundable deposit amount"
+  }
 }
 
 export default function EntityDisplay({ entities, filename, onReset }: EntityDisplayProps) {
-  const totalEntities = Object.values(entities).reduce((sum, arr) => sum + arr.length, 0)
-
   return (
-    <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
-        <Box>
-          <Typography variant="h4" gutterBottom sx={{ fontWeight: 600 }}>
-            Named Entities Extracted
+    <Paper
+      elevation={2}
+      sx={{
+        p: 3,
+        borderRadius: 3,
+        background: "linear-gradient(to bottom, #ffffff, #f8fafc)",
+      }}
+    >
+      {/* Header */}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 4 }}>
+        <Box flex={1}>
+          <Typography variant="h5" sx={{ fontWeight: 600, mb: 0.5 }}>
+            Lease Agreement Details
           </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Found {totalEntities} entities in <strong>{filename}</strong>
+          <Typography variant="body2" color="text.secondary">
+            Key information extracted from {filename}
           </Typography>
         </Box>
-        <Button variant="outlined" startIcon={<Refresh />} onClick={onReset} sx={{ height: "fit-content" }}>
-          Upload New Document
+        <Button
+          startIcon={<Refresh />}
+          onClick={onReset}
+          variant="outlined"
+          size="small"
+          sx={{
+            borderRadius: 2,
+            textTransform: "none",
+            px: 2,
+          }}
+        >
+          Process New Document
         </Button>
       </Box>
 
-      <Divider sx={{ mb: 4 }} />
+      {/* Main Content */}
+      <Stack spacing={3}>
+        {/* Parties Section */}
+        <Box>
+          <Typography variant="h6" sx={{ 
+            mb: 2, 
+            fontWeight: 500, 
+            color: "text.secondary",
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}>
+            <Person sx={{ fontSize: 20 }} /> Parties Involved
+          </Typography>
+          <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+            {["LESSOR_NAME", "LESSEE_NAME"].map((entityType) => {
+              const entityList = entities[entityType] || []
+              const config = entityConfig[entityType as keyof typeof entityConfig]
+              if (!config || entityList.length === 0) return null
 
-      {totalEntities === 0 ? (
-        <Box sx={{ textAlign: "center", py: 6 }}>
-          <CheckCircle sx={{ fontSize: 64, color: "text.secondary", mb: 2 }} />
-          <Typography variant="h6" color="text.secondary" gutterBottom>
-            No Named Entities Found
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            The document was processed but no recognizable entities were identified.
-          </Typography>
+              return (
+                <Box key={entityType} sx={{ flex: "1 1 300px", minWidth: 0 }}>
+                  <Card 
+                    elevation={0}
+                    sx={{ 
+                      p: 2.5,
+                      border: 1,
+                      borderColor: "divider",
+                      borderRadius: 2,
+                      height: "100%",
+                      transition: "all 0.2s ease",
+                      "&:hover": {
+                        transform: "translateY(-2px)",
+                        boxShadow: "0 8px 16px -8px rgba(0,0,0,0.1)",
+                        borderColor: `${config.color}.main`,
+                      }
+                    }}
+                  >
+                    <Stack direction="row" spacing={2} alignItems="center">
+                      <Avatar
+                        sx={{
+                          bgcolor: `${config.color}.lighter`,
+                          color: `${config.color}.main`,
+                          width: 48,
+                          height: 48,
+                        }}
+                      >
+                        <config.icon />
+                      </Avatar>
+                      <Box sx={{ minWidth: 0 }}>
+                        <Typography variant="subtitle1" sx={{ 
+                          fontWeight: 600, 
+                          mb: 0.5,
+                          color: `${config.color}.main`
+                        }}>
+                          {config.label}
+                        </Typography>
+                        <Typography variant="body1" sx={{ 
+                          fontWeight: 500,
+                          overflow: "hidden",
+                          textOverflow: "ellipsis"
+                        }}>
+                          {entityList[0]}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          {config.description}
+                        </Typography>
+                      </Box>
+                    </Stack>
+                  </Card>
+                </Box>
+              )
+            })}
+          </Box>
         </Box>
-      ) : (
-        <Grid container spacing={3}>
-          {Object.entries(entities).map(([entityType, entityList]) => {
-            const config = entityConfig[entityType as keyof typeof entityConfig]
-            const IconComponent = config.icon
 
-            if (entityList.length === 0) return null
+        {/* Property Section */}
+        <Box>
+          <Typography variant="h6" sx={{ 
+            mb: 2, 
+            fontWeight: 500, 
+            color: "text.secondary",
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}>
+            <LocationOn sx={{ fontSize: 20 }} /> Property Details
+          </Typography>
+          {["PROPERTY_ADDRESS"].map((entityType) => {
+            const entityList = entities[entityType] || []
+            const config = entityConfig[entityType as keyof typeof entityConfig]
+            if (!config || entityList.length === 0) return null
 
             return (
-              <Grid item xs={12} sm={6} md={4} key={entityType}>
-                <Paper
-                  elevation={1}
-                  sx={{
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 2,
-                    border: `2px solid`,
-                    borderColor: `${config.color}.light`,
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      elevation: 3,
-                      borderColor: `${config.color}.main`,
-                    },
-                  }}
-                >
-                  <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                    <IconComponent
-                      sx={{
-                        color: `${config.color}.main`,
-                        fontSize: 28,
-                        mr: 1,
-                      }}
-                    />
-                    <Typography variant="h6" sx={{ fontWeight: 600 }}>
+              <Card 
+                key={entityType}
+                elevation={0}
+                sx={{ 
+                  p: 2.5,
+                  border: 1,
+                  borderColor: "divider",
+                  borderRadius: 2,
+                  transition: "all 0.2s ease",
+                  "&:hover": {
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 8px 16px -8px rgba(0,0,0,0.1)",
+                    borderColor: `${config.color}.main`,
+                  }
+                }}
+              >
+                <Stack direction="row" spacing={2} alignItems="center">
+                  <Avatar
+                    sx={{
+                      bgcolor: `${config.color}.lighter`,
+                      color: `${config.color}.main`,
+                      width: 48,
+                      height: 48,
+                    }}
+                  >
+                    <config.icon />
+                  </Avatar>
+                  <Box sx={{ minWidth: 0 }}>
+                    <Typography variant="subtitle1" sx={{ 
+                      fontWeight: 600, 
+                      mb: 0.5,
+                      color: `${config.color}.main`
+                    }}>
                       {config.label}
                     </Typography>
-                    <Chip label={entityList.length} size="small" color={config.color as any} sx={{ ml: "auto" }} />
+                    <Typography variant="body1" sx={{ 
+                      fontWeight: 500,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis"
+                    }}>
+                      {entityList[0]}
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      {config.description}
+                    </Typography>
                   </Box>
-
-                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                    {entityList.slice(0, 10).map((entity, index) => (
-                      <Chip
-                        key={index}
-                        label={entity}
-                        variant="outlined"
-                        size="small"
-                        color={config.color as any}
-                        sx={{
-                          fontSize: "0.75rem",
-                          "& .MuiChip-label": {
-                            px: 1,
-                          },
-                        }}
-                      />
-                    ))}
-                    {entityList.length > 10 && (
-                      <Chip
-                        label={`+${entityList.length - 10} more`}
-                        variant="filled"
-                        size="small"
-                        color={config.color as any}
-                        sx={{ fontSize: "0.75rem" }}
-                      />
-                    )}
-                  </Box>
-                </Paper>
-              </Grid>
+                </Stack>
+              </Card>
             )
           })}
-        </Grid>
-      )}
+        </Box>
+
+        {/* Lease Terms Section */}
+        <Box>
+          <Typography variant="h6" sx={{ 
+            mb: 2, 
+            fontWeight: 500, 
+            color: "text.secondary",
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}>
+            <AttachMoney sx={{ fontSize: 20 }} /> Agreement Terms
+          </Typography>
+          <Box sx={{ 
+            display: "grid",
+            gap: 2,
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(4, 1fr)"
+            }
+          }}>
+            {["LEASE_START_DATE", "LEASE_END_DATE", "RENT_AMOUNT", "SECURITY_DEPOSIT_AMOUNT"].map((entityType) => {
+              const entityList = entities[entityType] || []
+              const config = entityConfig[entityType as keyof typeof entityConfig]
+              if (!config || entityList.length === 0) return null
+
+              return (
+                <Card 
+                  key={entityType}
+                  elevation={0}
+                  sx={{ 
+                    p: 2.5,
+                    border: 1,
+                    borderColor: "divider",
+                    borderRadius: 2,
+                    height: "100%",
+                    transition: "all 0.2s ease",
+                    "&:hover": {
+                      transform: "translateY(-2px)",
+                      boxShadow: "0 8px 16px -8px rgba(0,0,0,0.1)",
+                      borderColor: `${config.color}.main`,
+                    }
+                  }}
+                >
+                  <Stack spacing={2}>
+                    <Avatar
+                      sx={{
+                        bgcolor: `${config.color}.lighter`,
+                        color: `${config.color}.main`,
+                        width: 44,
+                        height: 44,
+                        boxShadow: `0 0 0 6px ${config.color}.lighter`,
+                      }}
+                    >
+                      <config.icon />
+                    </Avatar>
+                    <Box sx={{ minWidth: 0 }}>
+                      <Typography variant="subtitle2" sx={{ 
+                        fontWeight: 600, 
+                        mb: 0.5,
+                        color: `${config.color}.main`
+                      }}>
+                        {config.label}
+                      </Typography>
+                      <Typography variant="body1" sx={{ 
+                        fontWeight: 500,
+                        fontSize: "1.125rem",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis"
+                      }}>
+                        {entityList[0]}
+                      </Typography>
+                      <Typography 
+                        variant="caption" 
+                        color="text.secondary" 
+                        sx={{ 
+                          display: "block",
+                          mt: 0.5,
+                          opacity: 0.8
+                        }}
+                      >
+                        {config.description}
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Card>
+              )
+            })}
+          </Box>
+        </Box>
+      </Stack>
     </Paper>
   )
 }

@@ -1,20 +1,26 @@
 "use client"
 
 import { useRef, useEffect } from "react"
-import { Box, Paper, TextField, IconButton, Typography, Avatar, Divider, Chip } from "@mui/material"
+import { Box, Paper, TextField, IconButton, Typography, Avatar, Divider, Chip, useTheme } from "@mui/material"
 import { Send, Person, SmartToy, Chat } from "@mui/icons-material"
 import { useChat } from "ai/react"
 
+interface ChatMessage {
+  id: string;
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 interface ChatInterfaceProps {
-  filename: string
+  filename: string;
 }
 
 export default function ChatInterface({ filename }: ChatInterfaceProps) {
+  const theme = useTheme();
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
     body: { filename },
-  })
-
-  const messagesEndRef = useRef<HTMLDivElement>(null)
+  });
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -25,25 +31,32 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
   }, [messages])
 
   return (
-    <Paper elevation={3} sx={{ borderRadius: 2, overflow: "hidden" }}>
+    <Paper
+      elevation={2}
+      sx={{
+        borderRadius: 3,
+        overflow: "hidden",
+        background: "linear-gradient(to bottom, #ffffff, #f8fafc)",
+      }}
+    >
       {/* Header */}
       <Box
         sx={{
-          p: 3,
+          p: 2.5,
           borderBottom: 1,
           borderColor: "divider",
-          background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+          background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
           color: "white",
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <Chat sx={{ fontSize: 28 }} />
           <Box>
-            <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 0.5 }}>
               Document Chat Assistant
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.9 }}>
-              Ask questions about your document content • {filename}
+              Ask questions about your document • {filename}
             </Typography>
           </Box>
           <Chip
@@ -55,6 +68,9 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
               color: "white",
               borderColor: "rgba(255,255,255,0.3)",
               backgroundColor: "rgba(255,255,255,0.1)",
+              "& .MuiChip-label": {
+                px: 2,
+              },
             }}
           />
         </Box>
@@ -63,28 +79,44 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
       {/* Messages Area */}
       <Box
         sx={{
-          height: 500,
+          height: "calc(100vh - 400px)",
+          minHeight: 400,
           overflowY: "auto",
           p: 3,
           display: "flex",
           flexDirection: "column",
           gap: 3,
-          backgroundColor: "#fafafa",
+          backgroundColor: "#f8fafc",
         }}
       >
         {messages.length === 0 && (
-          <Box sx={{ textAlign: "center", py: 6 }}>
-            <SmartToy sx={{ fontSize: 64, color: "primary.main", mb: 3, opacity: 0.7 }} />
+          <Box sx={{ textAlign: "center", py: 8 }}>
+            <SmartToy sx={{ fontSize: 72, color: "primary.main", mb: 3, opacity: 0.7 }} />
             <Typography variant="h6" color="text.primary" gutterBottom>
               Ready to answer your questions!
             </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
               I can help you understand and analyze your document content
             </Typography>
-            <Box sx={{ display: "flex", gap: 1, justifyContent: "center", flexWrap: "wrap" }}>
-              <Chip label="What is this document about?" variant="outlined" size="small" />
-              <Chip label="Summarize the key points" variant="outlined" size="small" />
-              <Chip label="Who are the main people mentioned?" variant="outlined" size="small" />
+            <Box sx={{ display: "flex", gap: 1.5, justifyContent: "center", flexWrap: "wrap" }}>
+              <Chip
+                label="What is this document about?"
+                variant="outlined"
+                size="medium"
+                sx={{ px: 1 }}
+              />
+              <Chip
+                label="Summarize the key points"
+                variant="outlined"
+                size="medium"
+                sx={{ px: 1 }}
+              />
+              <Chip
+                label="Who are the main people mentioned?"
+                variant="outlined"
+                size="medium"
+                sx={{ px: 1 }}
+              />
             </Box>
           </Box>
         )}
@@ -97,6 +129,8 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
               alignItems: "flex-start",
               gap: 2,
               flexDirection: message.role === "user" ? "row-reverse" : "row",
+              maxWidth: "85%",
+              alignSelf: message.role === "user" ? "flex-end" : "flex-start",
             }}
           >
             <Avatar
@@ -104,21 +138,21 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
                 bgcolor: message.role === "user" ? "primary.main" : "secondary.main",
                 width: 40,
                 height: 40,
-                boxShadow: 2,
+                boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
               }}
             >
               {message.role === "user" ? <Person /> : <SmartToy />}
             </Avatar>
 
             <Paper
-              elevation={2}
+              elevation={1}
               sx={{
-                p: 3,
-                maxWidth: "80%",
+                p: 2.5,
                 bgcolor: message.role === "user" ? "primary.main" : "white",
                 color: message.role === "user" ? "white" : "text.primary",
-                borderRadius: 3,
+                borderRadius: 2.5,
                 position: "relative",
+                maxWidth: "100%",
                 "&::before": {
                   content: '""',
                   position: "absolute",
@@ -129,11 +163,18 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
                   borderTop: "8px solid transparent",
                   borderBottom: "8px solid transparent",
                   [message.role === "user" ? "borderLeft" : "borderRight"]:
-                    `8px solid ${message.role === "user" ? "#1976d2" : "white"}`,
+                    `8px solid ${message.role === "user" ? theme.palette.primary.main : "#fff"}`,
                 },
               }}
             >
-              <Typography variant="body1" sx={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  whiteSpace: "pre-wrap",
+                  lineHeight: 1.6,
+                  letterSpacing: 0.2
+                }}
+              >
                 {message.content}
               </Typography>
             </Paper>
@@ -145,7 +186,15 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
             <Avatar sx={{ bgcolor: "secondary.main", width: 40, height: 40 }}>
               <SmartToy />
             </Avatar>
-            <Paper elevation={2} sx={{ p: 3, bgcolor: "white", borderRadius: 3 }}>
+            <Paper
+              elevation={1}
+              sx={{
+                p: 2.5,
+                bgcolor: "white",
+                borderRadius: 2.5,
+                minWidth: 120
+              }}
+            >
               <Typography variant="body1" color="text.secondary">
                 <Box
                   component="span"
@@ -169,7 +218,7 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
       <Divider />
 
       {/* Input Area */}
-      <Box sx={{ p: 3, backgroundColor: "white" }}>
+      <Box sx={{ p: 2.5, backgroundColor: "white" }}>
         <form onSubmit={handleSubmit}>
           <Box sx={{ display: "flex", gap: 2, alignItems: "flex-end" }}>
             <TextField
@@ -183,8 +232,15 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
               maxRows={4}
               sx={{
                 "& .MuiOutlinedInput-root": {
-                  borderRadius: 3,
-                  backgroundColor: "#f8f9fa",
+                  borderRadius: 2.5,
+                  backgroundColor: "#f8fafc",
+                  transition: "all 0.2s ease",
+                  "&:hover": {
+                    backgroundColor: "#f1f5f9",
+                  },
+                  "&.Mui-focused": {
+                    backgroundColor: "#ffffff",
+                  },
                 },
               }}
             />
@@ -197,12 +253,14 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
                 color: "white",
                 width: 48,
                 height: 48,
+                borderRadius: 2.5,
                 "&:hover": {
                   bgcolor: "primary.dark",
                 },
                 "&:disabled": {
                   bgcolor: "grey.300",
                 },
+                transition: "all 0.2s ease",
               }}
             >
               <Send />
@@ -211,14 +269,16 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
         </form>
       </Box>
 
-      <style jsx>{`
-        @keyframes dots {
-          0%, 20% { content: '.'; }
-          40% { content: '..'; }
-          60% { content: '...'; }
-          90%, 100% { content: ''; }
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            90%, 100% { content: ''; }
+          }
+        `
+      }} />
     </Paper>
   )
 }

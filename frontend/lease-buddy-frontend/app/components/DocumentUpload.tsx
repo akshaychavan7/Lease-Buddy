@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useCallback } from "react"
-import { Box, Typography, Button, Paper } from "@mui/material"
-import { CloudUpload, Description } from "@mui/icons-material"
+import { useCallback } from "react"
+import { Box, Typography, Paper } from "@mui/material"
 import { useDropzone } from "react-dropzone"
+import { CloudUpload } from "@mui/icons-material"
 
 interface DocumentUploadProps {
   onUploadStart: () => void
@@ -18,99 +18,123 @@ export default function DocumentUpload({
   onUploadError,
   onProcessingStep,
 }: DocumentUploadProps) {
-  const [uploading, setUploading] = useState(false)
-
   const onDrop = useCallback(
     async (acceptedFiles: File[]) => {
-      const file = acceptedFiles[0]
-      if (!file) return
+      if (acceptedFiles.length === 0) return
 
-      setUploading(true)
-      onUploadStart()
+      const file = acceptedFiles[0]
+      const formData = new FormData()
+      formData.append("file", file)
 
       try {
+        onUploadStart()
         onProcessingStep("Uploading document...")
-
-        const formData = new FormData()
-        formData.append("file", file)
-
-        // Simulate processing steps
-        setTimeout(() => onProcessingStep("Extracting text content..."), 1000)
-        setTimeout(() => onProcessingStep("Running NER analysis..."), 2000)
-        setTimeout(() => onProcessingStep("Identifying named entities..."), 3000)
-        setTimeout(() => onProcessingStep("Finalizing results..."), 4000)
 
         const response = await fetch("/api/upload", {
           method: "POST",
           body: formData,
         })
 
-        const result = await response.json()
-
-        if (result.success) {
-          onProcessingStep("Processing complete!")
-          setTimeout(() => onUploadSuccess(result), 500)
-        } else {
-          onUploadError(result.message || "Upload failed")
+        if (!response.ok) {
+          throw new Error("Upload failed")
         }
+
+        const data = await response.json()
+        onUploadSuccess(data)
       } catch (error) {
-        console.error("Upload error:", error)
-        onUploadError("Upload failed. Please try again.")
-      } finally {
-        setUploading(false)
+        onUploadError("Failed to upload and process the document. Please try again.")
       }
     },
-    [onUploadStart, onUploadSuccess, onUploadError, onProcessingStep],
+    [onUploadStart, onUploadSuccess, onUploadError, onProcessingStep]
   )
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "text/plain": [".txt"],
-      "application/pdf": [".pdf"],
-      "application/msword": [".doc"],
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
+      'application/pdf': ['.pdf'],
+      'text/plain': ['.txt'],
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'],
+      'application/msword': ['.doc']
     },
-    multiple: false,
-    disabled: uploading,
+    maxFiles: 1,
   })
 
   return (
-    <Box sx={{ textAlign: "center" }}>
+    <Box sx={{ maxWidth: 600, mx: "auto" }}>
       <Paper
-        {...getRootProps()}
+        elevation={2}
         sx={{
-          p: 6,
-          border: "2px dashed",
-          borderColor: isDragActive ? "primary.main" : "grey.300",
-          backgroundColor: isDragActive ? "action.hover" : "background.paper",
-          cursor: uploading ? "not-allowed" : "pointer",
-          transition: "all 0.3s ease",
-          "&:hover": {
-            borderColor: "primary.main",
-            backgroundColor: "action.hover",
-          },
+          p: 4,
+          borderRadius: 3,
+          background: "linear-gradient(to bottom, #ffffff, #f8fafc)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <input {...getInputProps()} />
+        <Box
+          {...getRootProps()}
+          sx={{
+            position: "relative",
+            zIndex: 1,
+            border: "2px dashed",
+            borderColor: isDragActive ? "primary.main" : "divider",
+            borderRadius: 3,
+            p: 8,
+            textAlign: "center",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            backgroundColor: isDragActive ? "action.hover" : "transparent",
+            "&:hover": {
+              borderColor: "primary.main",
+              backgroundColor: "action.hover",
+            },
+          }}
+        >
+          <input {...getInputProps()} />
+          <CloudUpload
+            sx={{
+              fontSize: 48,
+              color: isDragActive ? "primary.main" : "text.secondary",
+              mb: 2,
+              transition: "color 0.2s ease",
+            }}
+          />
+          <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+            {isDragActive ? "Drop your document here" : "Upload your document"}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Drag and drop your file here, or click to select
+          </Typography>
+          <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 1 }}>
+            Supported formats: PDF, DOC, DOCX, TXT
+          </Typography>
+        </Box>
 
-        <CloudUpload sx={{ fontSize: 80, color: "primary.main", mb: 3 }} />
-
-        <Typography variant="h5" gutterBottom>
-          {isDragActive ? "Drop the file here" : "Upload Your Document"}
-        </Typography>
-
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          {isDragActive ? "Release to upload" : "Drag & drop a document here or click to browse"}
-        </Typography>
-
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-          Supported formats: TXT, PDF, DOC, DOCX (Max 10MB)
-        </Typography>
-
-        <Button variant="contained" startIcon={<Description />} size="large" disabled={uploading}>
-          Choose File
-        </Button>
+        {/* Background decoration */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: -100,
+            right: -100,
+            width: 200,
+            height: 200,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 70%)",
+            zIndex: 0,
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: -60,
+            left: -60,
+            width: 120,
+            height: 120,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(219, 39, 119, 0.1) 0%, rgba(219, 39, 119, 0) 70%)",
+            zIndex: 0,
+          }}
+        />
       </Paper>
     </Box>
   )

@@ -1,60 +1,100 @@
 "use client"
 
-import { Box, Typography, CircularProgress, Paper, Button, LinearProgress } from "@mui/material"
-import { Refresh } from "@mui/icons-material"
-import { useState, useEffect } from "react"
+import { Box, Typography, Paper, LinearProgress, Button } from "@mui/material"
+import { RestartAlt } from "@mui/icons-material"
 
 interface ProcessingLoaderProps {
   currentStep: string
   onReset: () => void
 }
 
-const processingSteps = [
-  "Uploading document...",
-  "Extracting text content...",
-  "Running NER analysis...",
-  "Identifying named entities...",
-  "Finalizing results...",
-  "Processing complete!",
-]
-
 export default function ProcessingLoader({ currentStep, onReset }: ProcessingLoaderProps) {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const stepIndex = processingSteps.indexOf(currentStep)
-    if (stepIndex !== -1) {
-      setProgress((stepIndex / (processingSteps.length - 1)) * 100)
-    }
-  }, [currentStep])
-
   return (
-    <Box sx={{ textAlign: "center", py: 6 }}>
-      <Paper elevation={2} sx={{ p: 6, maxWidth: 600, mx: "auto" }}>
-        <CircularProgress size={80} sx={{ mb: 4, color: "primary.main" }} />
-
-        <Typography variant="h5" gutterBottom>
-          Processing Your Document
-        </Typography>
-
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-          Please wait while we analyze your document and extract named entities...
-        </Typography>
-
-        <Box sx={{ mb: 4 }}>
-          <Typography variant="body2" color="primary.main" sx={{ mb: 2, fontWeight: 500 }}>
-            {currentStep}
+    <Box sx={{ maxWidth: 600, mx: "auto", textAlign: "center" }}>
+      <Paper
+        elevation={2}
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          background: "linear-gradient(to bottom, #ffffff, #f8fafc)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <Box sx={{ position: "relative", zIndex: 1 }}>
+          <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
+            Processing Document
           </Typography>
-          <LinearProgress variant="determinate" value={progress} sx={{ height: 8, borderRadius: 4 }} />
+          
+          <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+            {currentStep || "Initializing..."}
+          </Typography>
+
+          <Box sx={{ px: 4 }}>
+            <LinearProgress
+              sx={{
+                height: 6,
+                borderRadius: 3,
+                bgcolor: "rgba(37, 99, 235, 0.1)",
+                "& .MuiLinearProgress-bar": {
+                  bgcolor: "primary.main",
+                  backgroundImage: "linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)",
+                  backgroundSize: "1rem 1rem",
+                  animation: "progress-stripes 1s linear infinite",
+                  "@keyframes progress-stripes": {
+                    "0%": {
+                      backgroundPosition: "1rem 0"
+                    },
+                    "100%": {
+                      backgroundPosition: "0 0"
+                    }
+                  }
+                },
+              }}
+            />
+          </Box>
+
+          <Button
+            startIcon={<RestartAlt />}
+            onClick={onReset}
+            variant="outlined"
+            size="small"
+            sx={{
+              mt: 4,
+              borderRadius: 2,
+              textTransform: "none",
+              px: 2,
+            }}
+          >
+            Cancel Processing
+          </Button>
         </Box>
 
-        <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 3 }}>
-          This may take a few moments depending on document size
-        </Typography>
-
-        <Button variant="outlined" startIcon={<Refresh />} onClick={onReset} size="small">
-          Cancel & Upload New Document
-        </Button>
+        {/* Background decoration */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: -100,
+            right: -100,
+            width: 200,
+            height: 200,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0) 70%)",
+            zIndex: 0,
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: -60,
+            left: -60,
+            width: 120,
+            height: 120,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(219, 39, 119, 0.1) 0%, rgba(219, 39, 119, 0) 70%)",
+            zIndex: 0,
+          }}
+        />
       </Paper>
     </Box>
   )
