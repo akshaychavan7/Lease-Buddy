@@ -3,6 +3,9 @@ import { writeFile, mkdir } from "fs/promises"
 import { join } from "path"
 import { existsSync } from "fs"
 
+// FastAPI backend URL
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000"
+
 export async function POST(request: NextRequest) {
   try {
     const data = await request.formData()
@@ -26,11 +29,39 @@ export async function POST(request: NextRequest) {
     const filepath = join(uploadsDir, filename)
     await writeFile(filepath, buffer)
 
-    // Simulate document processing and NER extraction
-    const documentContent = buffer.toString("utf-8")
+    // Extract text content from the file
+    let documentContent = ""
+    
+    if (file.type === "text/plain") {
+      documentContent = buffer.toString("utf-8")
+    } else if (file.type === "application/pdf") {
+      // For PDF files, you might need a PDF parser library
+      // For now, we'll use a simple text extraction
+      documentContent = buffer.toString("utf-8")
+    } else {
+      // For other file types, try to extract text
+      documentContent = buffer.toString("utf-8")
+    }
 
-    // Simple NER simulation - in a real app, you'd use a proper NER model
-    const entities = extractNamedEntities(documentContent)
+    // Call FastAPI backend for NER extraction
+    const nerResponse = await fetch(`${BACKEND_URL}/extract-entities`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text: documentContent,
+      }),
+    })
+
+    if (!nerResponse.ok) {
+      throw new Error(`NER extraction failed: ${nerResponse.statusText}`)
+    }
+
+    const nerData = await nerResponse.json()
+    
+    // Transform the entities to match the expected format
+    const entities = transformEntities(nerData.entities)
 
     return NextResponse.json({
       success: true,
@@ -40,44 +71,44 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error("Upload error:", error)
-    return NextResponse.json({ success: false, message: "Upload failed" })
+    return NextResponse.json({ 
+      success: false, 
+      message: error instanceof Error ? error.message : "Upload failed" 
+    })
   }
 }
 
-function extractNamedEntities(text: string) {
-  // Simple regex-based NER simulation
-  const entities = {
-    PERSON: [],
-    ORGANIZATION: [],
-    LOCATION: [],
-    DATE: [],
-    EMAIL: [],
-    PHONE: [],
+function transformEntities(entities: any[]) {
+  // Transform the FastAPI response entities to match the expected frontend format
+  const transformed: Record<string, string[]> = {
+    LESSOR_NAME: [],
+    LESSEE_NAME: [],
+    PROPERTY_ADDRESS: [],
+    LEASE_START_DATE: [],
+    LEASE_END_DATE: [],
+    RENT_AMOUNT: [],
+    SECURITY_DEPOSIT_AMOUNT: [],
+    // Add other entity types as needed
   }
 
-  // Extract emails
-  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g
-  entities.EMAIL = [...new Set(text.match(emailRegex) || [])]
+  entities.forEach((entity) => {
+    const label = entity.label
+    const text = entity.text
 
-  // Extract phone numbers
-  const phoneRegex = /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g
-  entities.PHONE = [...new Set(text.match(phoneRegex) || [])]
+    if (transformed[label]) {
+      if (!transformed[label].includes(text)) {
+        transformed[label].push(text)
+      }
+    } else {
+      // If the entity type is not in our predefined list, create a new category
+      if (!transformed[label]) {
+        transformed[label] = []
+      }
+      if (!transformed[label].includes(text)) {
+        transformed[label].push(text)
+      }
+    }
+  })
 
-  // Extract dates
-  const dateRegex = /\b\d{1,2}\/\d{1,2}\/\d{4}\b|\b\d{4}-\d{2}-\d{2}\b/g
-  entities.DATE = [...new Set(text.match(dateRegex) || [])]
-
-  // Extract potential names (capitalized words)
-  const nameRegex = /\b[A-Z][a-z]+ [A-Z][a-z]+\b/g
-  entities.PERSON = [...new Set(text.match(nameRegex) || [])].slice(0, 10)
-
-  // Extract potential organizations (words with Inc, Corp, LLC, etc.)
-  const orgRegex = /\b[A-Z][a-zA-Z\s]+(Inc|Corp|LLC|Ltd|Company|Corporation)\b/g
-  entities.ORGANIZATION = [...new Set(text.match(orgRegex) || [])]
-
-  // Extract potential locations (capitalized words followed by state abbreviations or common location words)
-  const locationRegex = /\b[A-Z][a-zA-Z\s]+(Street|St|Avenue|Ave|Road|Rd|City|State|County)\b/g
-  entities.LOCATION = [...new Set(text.match(locationRegex) || [])]
-
-  return entities
+  return transformed
 }
