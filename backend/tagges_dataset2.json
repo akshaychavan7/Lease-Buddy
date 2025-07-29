@@ -1,0 +1,1052 @@
+ "file_path": "/Users/ishanaggarwal/Downloads/nlp_proj/synthetic_data/synthetic_lease_1.txt",
+        "entities": {
+
+#1
+---- LESSOR_NAME ----
+Stewart, Vaughan and Sparks
+122 - 149 
+
+---- LESSEE_NAME ----
+Cynthia Anderson
+171 - 187 
+
+---- PROPERTY_ADDRESS ----
+066 Moody Mission Apt. 911, North Davidland, SC 84735
+288 - 341 
+
+---- LEASE_START_DATE ----
+398 - 410
+02 June 2025 
+
+---- LEASE_END_DATE ----
+02 June 2026
+434 - 446 
+
+---- RENT_AMOUNT ----
+$2492
+565 - 570 
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$4984
+804 - 809 
+
+
+#2
+---- LESSOR_NAME ----
+Xiamen Torch Hi-tech Industrial Development Zone Finance Services Center
+123 - 195
+
+---- LESSEE_NAME ----
+eHealth China (Xiamen) Technology Co., Ltd.
+217 - 260
+
+---- PROPERTY_ADDRESS ----
+8F-B, Chuangxin Building, Xiamen Software Park, Xiamen 361005
+360 - 421
+
+---- LEASE_START_DATE ----
+commence on 01 January 2023
+465 - 492
+
+---- LEASE_END_DATE ----
+31 December 2025
+516 - 532
+
+---- RENT_AMOUNT ----
+$37526
+651 - 657
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$75052
+891 - 897
+
+
+#3
+---- LESSOR_NAME ----
+Dongguan United Real Estate Co., Ltd.
+124 - 161
+
+---- LESSEE_NAME ----
+PepsiCo (China) Investment Co., Ltd.
+183 - 219
+
+---- PROPERTY_ADDRESS ----
+6th Floor, Block B, Vanke Times Center, Dongguan City, Guangdong Province
+319 - 392
+
+---- LEASE_START_DATE ----
+commence on 01 February 2024
+436 - 464
+
+---- LEASE_END_DATE ----
+31 January 2025
+488 - 503
+
+---- RENT_AMOUNT ----
+$11245
+622 - 628
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$22490
+862 - 868
+
+
+#4
+---- LESSOR_NAME ----
+Shanghai Pudong Software Park Co., Ltd.
+124 - 163
+
+---- LESSEE_NAME ----
+Tianwei Yingjia Education Technology (Shanghai) Co., Ltd.
+185 - 242
+
+---- PROPERTY_ADDRESS ----
+Building 3, No. 1500, Zuchongzhi Road, Zhangjiang Hi-Tech Park, Pudong New Area, Shanghai, China
+342 - 438
+
+---- LEASE_START_DATE ----
+commence on 01 December 2022
+482 - 510
+
+---- LEASE_END_DATE ----
+30 November 2025
+534 - 550
+
+---- RENT_AMOUNT ----
+$21984
+669 - 675
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$43968
+909 - 915
+
+
+#5
+---- LESSOR_NAME ----
+Landlord_5
+123 - 133
+
+---- LESSEE_NAME ----
+Tenant_5
+155 - 163
+
+---- PROPERTY_ADDRESS ----
+420 Elm Street, Apt 18, Springfield, ZZ 24120
+263 - 308
+
+---- LEASE_START_DATE ----
+commence on August 01, 2023
+352 - 379
+
+---- LEASE_END_DATE ----
+July 31, 2024
+403 - 416
+
+---- RENT_AMOUNT ----
+$1979
+534 - 539
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2338
+772 - 777
+
+
+#6
+---- LESSOR_NAME ----
+Landlord_6
+122 - 132
+
+---- LESSEE_NAME ----
+Tenant_6
+154 - 162
+
+---- PROPERTY_ADDRESS ----
+228 Elm Street, Apt 14, Springfield, ZZ 65444
+262 - 307
+
+---- LEASE_START_DATE ----
+commence on April 01, 2023
+351 - 377
+
+---- LEASE_END_DATE ----
+March 31, 2024
+401 - 415
+
+---- RENT_AMOUNT ----
+$2686
+533 - 538
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2742
+771 - 776
+
+
+#7
+---- LESSOR_NAME ----
+Landlord_7
+125 - 135
+
+---- LESSEE_NAME ----
+Tenant_7
+157 - 165
+
+---- PROPERTY_ADDRESS ----
+919 Elm Street, Apt 13, Springfield, ZZ 70821
+265 - 310
+
+---- LEASE_START_DATE ----
+commence on February 01, 2023
+354 - 383
+
+---- LEASE_END_DATE ----
+February 01, 2024
+407 - 424
+
+---- RENT_AMOUNT ----
+$1464
+542 - 547
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1840
+780 - 785
+
+
+#8
+---- LESSOR_NAME ----
+Landlord_8
+124 - 134
+
+---- LESSEE_NAME ----
+Tenant_8
+156 - 164
+
+---- PROPERTY_ADDRESS ----
+868 Elm Street, Apt 20, Springfield, ZZ 47463
+264 - 309
+
+---- LEASE_START_DATE ----
+commence on October 01, 2023
+353 - 381
+
+---- LEASE_END_DATE ----
+September 30, 2024
+405 - 423
+
+---- RENT_AMOUNT ----
+$2858
+541 - 546
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1948
+779 - 784
+
+
+#9
+---- LESSOR_NAME ----
+UNITED STATES STEEL CORPORATION
+124 - 155
+
+---- LESSEE_NAME ----
+TAURUS EXPLORATION, INC.
+177 - 201
+
+---- PROPERTY_ADDRESS ----
+124,000 acres in Jefferson and Tuscaloosa Counties, Alabama
+301 - 360
+
+---- LEASE_START_DATE ----
+commence on 01 February 2023
+405 - 433
+
+---- LEASE_END_DATE ----
+01 February 2024
+457 - 473
+
+---- RENT_AMOUNT ----
+$2200
+592 - 597
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$4400
+831 - 836
+
+
+#10
+---- LESSOR_NAME ----
+Lincoln Property Management
+125 - 152
+
+---- LESSEE_NAME ----
+Thermo Inc.
+174 - 185
+
+---- PROPERTY_ADDRESS ----
+545 Walnut Street, Dallas, TX 75201
+285 - 320
+
+---- LEASE_START_DATE ----
+commence on 15 September 2022
+365 - 394
+
+---- LEASE_END_DATE ----
+15 September 2023
+418 - 435
+
+---- RENT_AMOUNT ----
+$2600
+554 - 559
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$5200
+793 - 798
+
+
+#11
+---- LESSOR_NAME ----
+Emerald Estates LLC
+120 - 139
+
+---- LESSEE_NAME ----
+Green Tech Labs
+161 - 176
+
+---- PROPERTY_ADDRESS ----
+78 Renewable Way, Portland, OR 97201
+276 - 312
+
+---- LEASE_START_DATE ----
+commence on 05 July 2021
+357 - 381
+
+---- LEASE_END_DATE ----
+05 July 2022
+405 - 417
+
+---- RENT_AMOUNT ----
+$1800
+536 - 541
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$3600
+775 - 780
+
+
+#12
+---- LESSOR_NAME ----
+UrbanRise Developers
+123 - 143
+
+---- LESSEE_NAME ----
+Zephyr Data Corp.
+165 - 182
+
+---- PROPERTY_ADDRESS ----
+902 Midtown Ave, Atlanta, GA 30309
+282 - 316
+
+---- LEASE_START_DATE ----
+commence on 10 January 2024
+361 - 388
+
+---- LEASE_END_DATE ----
+09 January 2025
+412 - 427
+
+---- RENT_AMOUNT ----
+$3400
+546 - 551
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$6800
+785 - 790
+
+
+#13
+---- LESSOR_NAME ----
+RealCapital Investments
+121 - 144
+
+---- LESSEE_NAME ----
+BioNova Systems
+166 - 181
+
+---- PROPERTY_ADDRESS ----
+22 Innovation Blvd, San Jose, CA 95134
+281 - 319
+
+---- LEASE_START_DATE ----
+commence on 20 April 2023
+364 - 389
+
+---- LEASE_END_DATE ----
+19 April 2024
+413 - 426
+
+---- RENT_AMOUNT ----
+$2950
+545 - 550
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$5900
+784 - 789
+
+
+#14
+---- LESSOR_NAME ----
+Global Realty LLC
+118 - 135
+
+---- LESSEE_NAME ----
+Alex Martin
+157 - 168
+
+---- PROPERTY_ADDRESS ----
+101 Cedar Lane, Albany, NY 12203
+268 - 300
+
+---- LEASE_START_DATE ----
+commence on 2023-01-01
+344 - 366
+
+---- LEASE_END_DATE ----
+2023-12-31
+390 - 400
+
+---- RENT_AMOUNT ----
+$2883
+519 - 524
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1685
+758 - 763
+
+
+#15
+---- LESSOR_NAME ----
+Pinecrest Properties
+118 - 138
+
+---- LESSEE_NAME ----
+Dana Lee
+160 - 168
+
+---- PROPERTY_ADDRESS ----
+55 Oceanview Drive, Miami, FL 33139
+268 - 303
+
+---- LEASE_START_DATE ----
+commence on 2023-01-01
+347 - 369
+
+---- LEASE_END_DATE ----
+2023-12-31
+393 - 403
+
+---- RENT_AMOUNT ----
+$1656
+522 - 527
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1211
+761 - 766
+
+
+#16
+---- LESSOR_NAME ----
+Oakwood Estates
+118 - 133
+
+---- LESSEE_NAME ----
+Chris Patel
+155 - 166
+
+---- PROPERTY_ADDRESS ----
+773 Willow Creek Rd, Dallas, TX 75248
+266 - 303
+
+---- LEASE_START_DATE ----
+commence on 2023-01-01
+347 - 369
+
+---- LEASE_END_DATE ----
+2023-12-31
+393 - 403
+
+---- RENT_AMOUNT ----
+$2629
+522 - 527
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1642
+761 - 766
+
+
+#17
+---- LESSOR_NAME ----
+Blue Horizon Holdings
+118 - 139
+
+---- LESSEE_NAME ----
+Morgan Zhang
+161 - 173
+
+---- PROPERTY_ADDRESS ----
+4200 Sunset Blvd, Los Angeles, CA 90026
+273 - 312
+
+---- LEASE_START_DATE ----
+commence on 2023-01-01
+356 - 378
+
+---- LEASE_END_DATE ----
+2023-12-31
+402 - 412
+
+---- RENT_AMOUNT ----
+$2444
+531 - 536
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1614
+770 - 775
+
+
+#18
+---- LESSOR_NAME ----
+Skyline Rentals
+118 - 133
+
+---- LESSEE_NAME ----
+Jamie Rivera
+155 - 167
+
+---- PROPERTY_ADDRESS ----
+219 Pine Hill Ave, Seattle, WA 98101
+267 - 303
+
+---- LEASE_START_DATE ----
+commence on 2023-01-01
+347 - 369
+
+---- LEASE_END_DATE ----
+2023-12-31
+393 - 403
+
+---- RENT_AMOUNT ----
+$2570
+522 - 527
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1818
+761 - 766
+
+
+#19
+---- LESSOR_NAME ----
+Lessor Name 19
+125 - 139
+
+---- LESSEE_NAME ----
+Lessee Name 19
+161 - 175
+
+---- PROPERTY_ADDRESS ----
+119 Main Street, City 19, ST 19000
+275 - 309
+
+---- LEASE_START_DATE ----
+commence on November 25, 2023
+353 - 382
+
+---- LEASE_END_DATE ----
+November 24, 2024
+406 - 423
+
+---- RENT_AMOUNT ----
+$2268.00
+542 - 550
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$573.00
+784 - 791
+
+
+#20
+---- LESSOR_NAME ----
+Lessor Name 20
+124 - 138
+
+---- LESSEE_NAME ----
+Lessee Name 20
+160 - 174
+
+---- PROPERTY_ADDRESS ----
+120 Main Street, City 20, ST 20000
+274 - 308
+
+---- LEASE_START_DATE ----
+commence on October 03, 2023
+352 - 380
+
+---- LEASE_END_DATE ----
+October 02, 2024
+404 - 420
+
+---- RENT_AMOUNT ----
+$1202.00
+539 - 547
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2369.00
+781 - 789
+
+
+#21
+---- LESSOR_NAME ----
+Lessor Name 21
+123 - 137
+
+---- LESSEE_NAME ----
+Lessee Name 21
+159 - 173
+
+---- PROPERTY_ADDRESS ----
+121 Main Street, City 21, ST 21000
+273 - 307
+
+---- LEASE_START_DATE ----
+commence on August 18, 2023
+351 - 378
+
+---- LEASE_END_DATE ----
+August 17, 2024
+402 - 417
+
+---- RENT_AMOUNT ----
+$1436.00
+536 - 544
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1642.00
+778 - 786
+
+
+#22
+---- LESSOR_NAME ----
+Lessor Name 22
+125 - 139
+
+---- LESSEE_NAME ----
+Lessee Name 22
+161 - 175
+
+---- PROPERTY_ADDRESS ----
+122 Main Street, City 22, ST 22000
+275 - 309
+
+---- LEASE_START_DATE ----
+commence on February 22, 2023
+353 - 382
+
+---- LEASE_END_DATE ----
+February 22, 2024
+406 - 423
+
+---- RENT_AMOUNT ----
+$1842.00
+542 - 550
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$576.00
+784 - 791
+
+
+#23
+---- LESSOR_NAME ----
+Lessor Name 23
+121 - 135
+
+---- LESSEE_NAME ----
+Lessee Name 23
+157 - 171
+
+---- PROPERTY_ADDRESS ----
+123 Main Street, City 23, ST 23000
+271 - 305
+
+---- LEASE_START_DATE ----
+commence on June 02, 2023
+349 - 374
+
+---- LEASE_END_DATE ----
+June 01, 2024
+398 - 411
+
+---- RENT_AMOUNT ----
+$1479.00
+530 - 538
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2184.00
+772 - 780
+
+
+#24
+---- LESSOR_NAME ----
+Lessor Name 24
+120 - 134
+
+---- LESSEE_NAME ----
+Lessee Name 24
+156 - 170
+
+---- PROPERTY_ADDRESS ----
+124 Main Street, City 24, ST 24000
+270 - 304
+
+---- LEASE_START_DATE ----
+commence on May 28, 2023
+348 - 372
+
+---- LEASE_END_DATE ----
+May 27, 2024
+396 - 408
+
+---- RENT_AMOUNT ----
+$2263.00
+527 - 535
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$1431.00
+769 - 777
+
+
+#25
+---- LESSOR_NAME ----
+Lessor Name 25
+120 - 134
+
+---- LESSEE_NAME ----
+Lessee Name 25
+156 - 170
+
+---- PROPERTY_ADDRESS ----
+125 Main Street, Apartment 25, Springfield, XY 10025
+270 - 322
+
+---- LEASE_START_DATE ----
+commence on May 21, 2025
+366 - 390
+
+---- LEASE_END_DATE ----
+May 21, 2026
+414 - 426
+
+---- RENT_AMOUNT ----
+Substring '$1250.00' not found.
+Substring not found
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+Substring '$625.00' not found.
+Substring not found
+
+
+#26
+---- LESSOR_NAME ----
+Lessor Name 26
+121 - 135
+
+---- LESSEE_NAME ----
+Lessee Name 26
+157 - 171
+
+---- PROPERTY_ADDRESS ----
+126 Main Street, Apartment 26, Springfield, XY 10026
+271 - 323
+
+---- LEASE_START_DATE ----
+commence on July 04, 2025
+367 - 392
+
+---- LEASE_END_DATE ----
+July 04, 2026
+416 - 429
+
+---- RENT_AMOUNT ----
+$1260
+548 - 553
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$630
+787 - 791
+
+
+#27
+---- LESSOR_NAME ----
+Lessor Name 27
+126 - 140
+
+---- LESSEE_NAME ----
+Lessee Name 27
+162 - 176
+
+---- PROPERTY_ADDRESS ----
+127 Main Street, Apartment 27, Springfield, XY 10027
+276 - 328
+
+---- LEASE_START_DATE ----
+commence on September 28, 2025
+372 - 402
+
+---- LEASE_END_DATE ----
+September 28, 2026
+426 - 444
+
+---- RENT_AMOUNT ----
+$1270
+563 - 568
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$635
+802 - 806
+
+
+#28
+---- LESSOR_NAME ----
+Lessor Name 28
+125 - 139
+
+---- LESSEE_NAME ----
+Lessee Name 28
+161 - 175
+
+---- PROPERTY_ADDRESS ----
+128 Main Street, Apartment 28, Springfield, XY 10028
+275 - 327
+
+---- LEASE_START_DATE ----
+commence on November 26, 2025
+371 - 400
+
+---- LEASE_END_DATE ----
+November 26, 2026
+424 - 441
+
+---- RENT_AMOUNT ----
+$1280
+560 - 565
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$640
+799 - 803
+
+
+#29
+---- LESSOR_NAME ----
+Lessor Name 29
+124 - 138
+
+---- LESSEE_NAME ----
+Lessee Name 29
+160 - 174
+
+---- PROPERTY_ADDRESS ----
+129 Main Street, Apartment 29, Springfield, XY 10029
+274 - 326
+
+---- LEASE_START_DATE ----
+commence on January 24, 2025
+370 - 398
+
+---- LEASE_END_DATE ----
+January 24, 2026
+422 - 438
+
+---- RENT_AMOUNT ----
+$1290
+557 - 562
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$645
+796 - 800
+
+
+#30
+---- LESSOR_NAME ----
+Lessor Name 30
+122 - 136
+
+---- LESSEE_NAME ----
+Lessee Name 30
+158 - 172
+
+---- PROPERTY_ADDRESS ----
+130 Main Street, Apartment 30, Springfield, XY 10030
+272 - 324
+
+---- LEASE_START_DATE ----
+commence on April 28, 2025
+368 - 394
+
+---- LEASE_END_DATE ----
+April 28, 2026
+418 - 432
+
+---- RENT_AMOUNT ----
+$1300
+551 - 556
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$650
+790 - 794
+
+
+#31
+---- LESSOR_NAME ----
+Lessor_31
+122 - 131
+
+---- LESSEE_NAME ----
+Lessee_31
+153 - 162
+
+---- PROPERTY_ADDRESS ----
+131 Main Street, Apt 31, Cityville, ST 10031
+262 - 306
+
+---- LEASE_START_DATE ----
+commence on April 14, 2024
+350 - 376
+
+---- LEASE_END_DATE ----
+April 14, 2025
+400 - 414
+
+---- RENT_AMOUNT ----
+$1775
+532 - 537
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2430
+770 - 775
+
+
+#32
+---- LESSOR_NAME ----
+Lessor_32
+122 - 131
+
+---- LESSEE_NAME ----
+Lessee_32
+153 - 162
+
+---- PROPERTY_ADDRESS ----
+132 Main Street, Apt 32, Cityville, ST 10032
+262 - 306
+
+---- LEASE_START_DATE ----
+commence on April 06, 2024
+350 - 376
+
+---- LEASE_END_DATE ----
+Substring 'April 26, 2025' not found.
+Substring not found
+
+---- RENT_AMOUNT ----
+$1800
+532 - 537
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2460
+770 - 775
+
+
+
+#33
+---- LESSOR_NAME ----
+Lessor_33
+125 - 134
+
+---- LESSEE_NAME ----
+Lessee_33
+156 - 165
+
+---- PROPERTY_ADDRESS ----
+133 Main Street, Apt 33, Cityville, ST 10033
+265 - 309
+
+---- LEASE_START_DATE ----
+commence on February 11, 2024
+353 - 382
+
+---- LEASE_END_DATE ----
+Substring 'April 26, 2025' not found.
+Substring not found
+
+---- RENT_AMOUNT ----
+$1825
+541 - 546
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2490
+779 - 784
+
+
+#34
+---- LESSOR_NAME ----
+Lessor_34
+122 - 131
+
+---- LESSEE_NAME ----
+Lessee_34
+153 - 162
+
+---- PROPERTY_ADDRESS ----
+134 Main Street, Apt 34, Cityville, ST 10034
+262 - 306
+
+---- LEASE_START_DATE ----
+commence on March 12, 2024
+350 - 376
+
+---- LEASE_END_DATE ----
+March 12, 2025
+400 - 414
+
+---- RENT_AMOUNT ----
+Substring '$1840' not found.
+Substring not found
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2520
+770 - 775
+
+
+$35
+---- LESSOR_NAME ----
+Lessor_35
+121 - 130
+
+---- LESSEE_NAME ----
+Lessee_35
+152 - 161
+
+---- PROPERTY_ADDRESS ----
+135 Main Street, Apt 35, Cityville, ST 10035
+261 - 305
+
+---- LEASE_START_DATE ----
+commence on June 19, 2024
+349 - 374
+
+---- LEASE_END_DATE ----
+June 19, 2025
+398 - 411
+
+---- RENT_AMOUNT ----
+$1875
+529 - 534
+
+---- SECURITY_DEPOSIT_AMOUNT ----
+$2550
+767 - 772
