@@ -1,0 +1,266 @@
+[{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd1.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 114,
+            "end": 168
+        },
+        "LESSEE_NAME": {
+            "start": 191,
+            "end": 238
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 332,
+            "end": 398
+        },
+        "LEASE_START_DATE": {
+            "start": 651,
+            "end": 664
+        },
+        "LEASE_END_DATE": {
+            "start": 682,
+            "end": 699
+        },
+        "RENT_AMOUNT": {
+            "start": 815,
+            "end": 826
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 815,
+            "end": 826
+        }
+    }
+},
+{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd2.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 127,
+            "end": 145
+        },
+        "LESSEE_NAME": {
+            "start": 169,
+            "end": 223
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 325,
+            "end": 364
+        },
+        "LEASE_START_DATE": {
+            "start": 83,
+            "end": 100
+        },
+        "LEASE_END_DATE": {
+            "start": 486,
+            "end": 503
+        },
+        "RENT_AMOUNT": {
+            "start": 670,
+            "end": 680
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 725,
+            "end": 730
+        }
+    }
+},
+{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd3.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 122,
+            "end": 159
+        },
+        "LESSEE_NAME": {
+            "start": 183,
+            "end": 219
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 322,
+            "end": 394
+        },
+        "LEASE_START_DATE": {
+            "start": 82,
+            "end": 95
+        },
+        "LEASE_END_DATE": {
+            "start": 511,
+            "end": 524
+        },
+        "RENT_AMOUNT": {
+            "start": 642,
+            "end": 655
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 642,
+            "end": 655
+        }
+    }
+},
+    {
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd4.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 125,
+            "end": 144
+        },
+        "LESSEE_NAME": {
+            "start": 168,
+            "end": 198
+        },
+        "PROPERTY_ADDRESS": {
+            "start": -1,
+            "end": -1
+        },
+        "LEASE_START_DATE": {
+            "start": -1,
+            "end": -1
+        },
+        "LEASE_END_DATE": {
+            "start": -1,
+            "end": -1
+        },
+        "RENT_AMOUNT": {
+            "start": -1,
+            "end": -1
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 1145,
+            "end": 1156
+        }
+    }
+},
+{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd6.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 158,
+            "end": 201
+        },
+        "LESSEE_NAME": {
+            "start": 224,
+            "end": 274
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 411,
+            "end": 439
+        },
+        "LEASE_START_DATE": {
+            "start": 84,
+            "end": 98
+        },
+        "LEASE_END_DATE": {
+            "start": 595,
+            "end": 608
+        },
+        "RENT_AMOUNT": {
+            "start": 797,
+            "end": 809
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": -1,
+            "end": -1
+        }
+    }
+},
+    {
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd7.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 133,
+            "end": 157
+        },
+        "LESSEE_NAME": {
+            "start": 218,
+            "end": 243
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 681,
+            "end": 741
+        },
+        "LEASE_START_DATE": {
+            "start": 90,
+            "end": 107
+        },
+        "LEASE_END_DATE": {
+            "start": 1118,
+            "end": 1133
+        },
+        "RENT_AMOUNT": {
+            "start": 1208,
+            "end": 1218
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 1387,
+            "end": 1396
+        }
+    }
+},
+    
+{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd8.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 120,
+            "end": 136
+        },
+        "LESSEE_NAME": {
+            "start": 158,
+            "end": 173
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 273,
+            "end": 323
+        },
+        "LEASE_START_DATE": {
+            "start": 379,
+            "end": 392
+        },
+        "LEASE_END_DATE": {
+            "start": 415,
+            "end": 427
+        },
+        "RENT_AMOUNT": {
+            "start": 546,
+            "end": 552
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 786,
+            "end": 792
+        }
+    }
+},
+{
+    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd10.docx",
+    "entities": {
+        "LESSOR_NAME": {
+            "start": 122,
+            "end": 140
+        },
+        "LESSEE_NAME": {
+            "start": 163,
+            "end": 179
+        },
+        "PROPERTY_ADDRESS": {
+            "start": 202,
+            "end": 272
+        },
+        "LEASE_START_DATE": {
+            "start": 304,
+            "end": 317
+        },
+        "LEASE_END_DATE": {
+            "start": 331,
+            "end": 345
+        },
+        "RENT_AMOUNT": {
+            "start": 396,
+            "end": 402
+        },
+        "SECURITY_DEPOSIT_AMOUNT": {
+            "start": 396,
+            "end": 402
+        }
+    }
+}
+]
