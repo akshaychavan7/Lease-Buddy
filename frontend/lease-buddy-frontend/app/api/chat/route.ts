@@ -1,37 +1,73 @@
-import { openai } from "@ai-sdk/openai"
-import { streamText } from "ai"
 import { readFile } from "fs/promises"
 import { join } from "path"
+
+// FastAPI backend URL
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000"
 
 export const maxDuration = 30
 
 export async function POST(req: Request) {
   try {
-    const { messages, filename } = await req.json()
+    const { messages, filename, documentContent } = await req.json()
 
-    let documentContext = ""
-    if (filename) {
+    // Get the last user message
+    const lastUserMessage = messages
+      .filter((msg: any) => msg.role === "user")
+      .pop()?.content || ""
+
+    let documentContext = documentContent || ""
+    if (!documentContext && filename) {
       try {
         const filepath = join(process.cwd(), "uploads", filename)
         const fileContent = await readFile(filepath, "utf-8")
-        documentContext = `Document content: ${fileContent}`
+        documentContext = fileContent
       } catch (error) {
         console.error("Error reading document:", error)
       }
     }
 
-    const systemPrompt = `You are a helpful assistant that answers questions about uploaded documents. 
-    ${documentContext ? `Here is the document content to reference: ${documentContext}` : "No document has been uploaded yet."}
-    
-    Please provide accurate answers based on the document content. If the question cannot be answered from the document, let the user know.`
-
-    const result = streamText({
-      model: openai("gpt-4o"),
-      system: systemPrompt,
-      messages,
+    // Call FastAPI backend for chat
+    const chatResponse = await fetch(`${BACKEND_URL}/chat`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: lastUserMessage,
+        document_content: documentContext,
+      }),
     })
 
-    return result.toDataStreamResponse()
+    if (!chatResponse.ok) {
+      throw new Error(`Chat request failed: ${chatResponse.statusText}`)
+    }
+
+    const chatData = await chatResponse.json()
+    
+    // Create a streaming response to match the expected format
+    const encoder = new TextEncoder()
+    const stream = new ReadableStream({
+      start(controller) {
+        // Send the response as a single chunk
+        const response = {
+          id: Date.now().toString(),
+          role: "assistant",
+          content: chatData.response,
+        }
+        
+        controller.enqueue(encoder.encode(`data: ${JSON.stringify(response)}\n\n`))
+        controller.enqueue(encoder.encode("data: [DONE]\n\n"))
+        controller.close()
+      },
+    })
+
+    return new Response(stream, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+      },
+    })
   } catch (error) {
     console.error("Chat API error:", error)
     return new Response("Internal Server Error", { status: 500 })

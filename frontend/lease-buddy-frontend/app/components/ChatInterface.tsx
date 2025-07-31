@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { Box, Paper, TextField, IconButton, Typography, Avatar, Divider, Chip, useTheme, Fade, Zoom, Button } from "@mui/material"
 import { Send, Person, SmartToy, Chat, AutoAwesome, Lightbulb, Help } from "@mui/icons-material"
-import { useChat } from "ai/react"
+import ReactMarkdown from "react-markdown"
 
 interface ChatMessage {
   id: string;
@@ -13,6 +13,7 @@ interface ChatMessage {
 
 interface ChatInterfaceProps {
   filename: string;
+  documentContent?: string;
 }
 
 const suggestedQuestions = [
@@ -24,13 +25,102 @@ const suggestedQuestions = [
   "What are my obligations as a tenant?"
 ]
 
-export default function ChatInterface({ filename }: ChatInterfaceProps) {
+export default function ChatInterface({ filename, documentContent }: ChatInterfaceProps) {
   const theme = useTheme();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [showSuggestions, setShowSuggestions] = useState(true);
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
-    body: { filename },
-  });
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+
+    const userMessage: ChatMessage = {
+      id: Date.now().toString(),
+      role: "user",
+      content: input,
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage],
+          filename,
+          documentContent,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to get response");
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error("No response body");
+      }
+
+      let assistantMessage = "";
+      const decoder = new TextDecoder();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value);
+        const lines = chunk.split("\n");
+
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            const data = line.slice(6);
+            if (data === "[DONE]") {
+              break;
+            }
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.role === "assistant") {
+                assistantMessage = parsed.content;
+              }
+            } catch (e) {
+              // Ignore parsing errors
+            }
+          }
+        }
+      }
+
+      if (assistantMessage) {
+        const assistantMsg: ChatMessage = {
+          id: (Date.now() + 1).toString(),
+          role: "assistant",
+          content: assistantMessage,
+        };
+        setMessages(prev => [...prev, assistantMsg]);
+      }
+    } catch (error) {
+      console.error("Chat error:", error);
+      const errorMsg: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        role: "assistant",
+        content: "Sorry, I encountered an error. Please try again.",
+      };
+      setMessages(prev => [...prev, errorMsg]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -41,7 +131,7 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
   }, [messages])
 
   const handleSuggestionClick = (question: string) => {
-    handleInputChange({ target: { value: question } } as any);
+    setInput(question);
     setShowSuggestions(false);
   }
 
@@ -255,17 +345,76 @@ export default function ChatInterface({ filename }: ChatInterfaceProps) {
                   },
                 }}
               >
-                <Typography
-                  variant="body1"
-                  sx={{
-                    whiteSpace: "pre-wrap",
-                    lineHeight: 1.7,
-                    letterSpacing: 0.2,
-                    fontWeight: message.role === "user" ? 500 : 400,
-                  }}
-                >
-                  {message.content}
-                </Typography>
+                {message.role === "assistant" ? (
+                  <Box
+                    sx={{
+                      "& h1, & h2, & h3, & h4, & h5, & h6": {
+                        fontWeight: 600,
+                        marginTop: 2,
+                        marginBottom: 1,
+                        color: "text.primary",
+                      },
+                      "& h1": { fontSize: "1.5rem" },
+                      "& h2": { fontSize: "1.3rem" },
+                      "& h3": { fontSize: "1.1rem" },
+                      "& p": {
+                        marginBottom: 1,
+                        lineHeight: 1.7,
+                      },
+                      "& ul, & ol": {
+                        marginBottom: 1,
+                        paddingLeft: 2,
+                      },
+                      "& li": {
+                        marginBottom: 0.5,
+                        lineHeight: 1.6,
+                      },
+                      "& strong, & b": {
+                        fontWeight: 600,
+                        color: "text.primary",
+                      },
+                      "& em, & i": {
+                        fontStyle: "italic",
+                      },
+                      "& code": {
+                        backgroundColor: "#f1f5f9",
+                        padding: "2px 4px",
+                        borderRadius: "4px",
+                        fontSize: "0.9em",
+                        fontFamily: "monospace",
+                      },
+                      "& pre": {
+                        backgroundColor: "#f8fafc",
+                        padding: 2,
+                        borderRadius: 1,
+                        overflow: "auto",
+                        marginBottom: 1,
+                      },
+                      "& blockquote": {
+                        borderLeft: "4px solid",
+                        borderColor: "primary.main",
+                        paddingLeft: 2,
+                        marginLeft: 0,
+                        fontStyle: "italic",
+                        color: "text.secondary",
+                      },
+                    }}
+                  >
+                    <ReactMarkdown>{message.content}</ReactMarkdown>
+                  </Box>
+                ) : (
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      whiteSpace: "pre-wrap",
+                      lineHeight: 1.7,
+                      letterSpacing: 0.2,
+                      fontWeight: 500,
+                    }}
+                  >
+                    {message.content}
+                  </Typography>
+                )}
               </Paper>
             </Box>
           </Fade>

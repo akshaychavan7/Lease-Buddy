@@ -120,6 +120,7 @@ type ProcessingState = "upload" | "processing" | "complete" | "error"
 interface UploadResponse {
   filename: string
   entities: Record<string, string[]>
+  fullContent: string
 }
 
 export default function Home() {
@@ -345,7 +346,7 @@ export default function Home() {
                     
                     <Fade in={true} timeout={1000}>
                       <Box>
-                        <ChatInterface filename={uploadedFile.filename} />
+                        <ChatInterface filename={uploadedFile.filename} documentContent={uploadedFile.fullContent} />
                       </Box>
                     </Fade>
                   </Box>

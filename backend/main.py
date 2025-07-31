@@ -6,14 +6,15 @@ import json
 import os
 from typing import List, Dict, Any
 import uvicorn
+from chat_helper import chat_helper
 
-# Initialize FastAPI app
+
 app = FastAPI(title="Lease Buddy NER API", version="1.0.0")
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your frontend URL
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -32,6 +33,14 @@ class Entity(BaseModel):
 class NERResponse(BaseModel):
     entities: List[Entity]
     text: str
+
+class ChatRequest(BaseModel):
+    message: str
+    document_content: str = None
+
+class ChatResponse(BaseModel):
+    response: str
+    success: bool
 
 # Global variable to store the loaded model
 nlp_model = None
@@ -97,7 +106,6 @@ async def extract_entities(request: TextRequest):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing text: {str(e)}")
-
 @app.get("/entity-types")
 async def get_entity_types():
     """Get the list of entity types the model can recognize"""
@@ -108,6 +116,34 @@ async def get_entity_types():
     
     ner = nlp_model.get_pipe("ner")
     return {"entity_types": list(ner.labels)}
+
+@app.post("/chat", response_model=ChatResponse)
+async def chat_with_document(request: ChatRequest):
+    """Chat with the document using OpenAI API"""
+    try:
+        # Set document context if provided
+        if request.document_content:
+            chat_helper.set_document_context(request.document_content)
+        
+        # Get response from OpenAI
+        response = chat_helper.get_chat_response(request.message)
+        
+        return ChatResponse(
+            response=response,
+            success=True
+        )
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Chat error: {str(e)}")
+
+@app.post("/chat/clear")
+async def clear_chat_history():
+    """Clear the chat conversation history"""
+    try:
+        chat_helper.clear_conversation()
+        return {"success": True, "message": "Chat history cleared"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error clearing chat history: {str(e)}")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

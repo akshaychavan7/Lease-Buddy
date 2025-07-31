@@ -68,6 +68,7 @@ export async function POST(request: NextRequest) {
       filename,
       entities,
       content: documentContent.substring(0, 1000) + "...", // Preview
+      fullContent: documentContent, // Full content for chat
     })
   } catch (error) {
     console.error("Upload error:", error)
