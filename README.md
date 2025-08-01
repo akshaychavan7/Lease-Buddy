@@ -17,6 +17,9 @@ Lease-Buddy combines multiple NLP models for entity recognition with both cloud-
 
 ## Architecture
 
+![Architecture](./docs/architecture_diagram.png)
+
+
 ### Backend
 - **FastAPI**: RESTful API server
 - **spaCy**: Fine-tuned NER model for entity extraction
