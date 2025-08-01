@@ -7,6 +7,7 @@ import os
 from typing import List, Dict, Any
 import uvicorn
 from chat_helper import chat_helper
+from local_chat_helper import local_chat_helper
 
 
 app = FastAPI(title="Lease Buddy NER API", version="1.0.0")
@@ -144,6 +145,44 @@ async def clear_chat_history():
         return {"success": True, "message": "Chat history cleared"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error clearing chat history: {str(e)}")
+
+# Local LLM Chat Endpoints
+@app.post("/chat/local", response_model=ChatResponse)
+async def chat_with_document_local(request: ChatRequest):
+    """Chat with the document using local LLM (Ollama)"""
+    try:
+        # Set document context if provided
+        if request.document_content:
+            local_chat_helper.set_document_context(request.document_content)
+        
+        # Get response from local LLM
+        response = local_chat_helper.get_chat_response(request.message)
+        
+        return ChatResponse(
+            response=response,
+            success=True
+        )
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Local chat error: {str(e)}")
+
+@app.post("/chat/local/clear")
+async def clear_local_chat_history():
+    """Clear the local chat conversation history"""
+    try:
+        local_chat_helper.clear_conversation()
+        return {"success": True, "message": "Local chat history cleared"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error clearing local chat history: {str(e)}")
+
+@app.get("/chat/local/model-info")
+async def get_local_model_info():
+    """Get information about the local LLM model"""
+    try:
+        model_info = local_chat_helper.get_model_info()
+        return {"success": True, "model_info": model_info}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error getting model info: {str(e)}")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

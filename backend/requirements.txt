@@ -4,4 +4,5 @@ spacy
 pydantic
 python-multipart
 openai
-python-dotenv 
+python-dotenv
+requests 

@@ -29,9 +29,41 @@ The server will start on http://localhost:8000
 
 ### Environment Variables
 
-- `OPENAI_API_KEY`: Your OpenAI API key (required for chat functionality)
+- `OPENAI_API_KEY`: Your OpenAI API key (required for cloud chat functionality)
+- `OLLAMA_URL`: Ollama server URL (default: http://localhost:11434)
+- `OLLAMA_MODEL`: Ollama model name (default: phi3:mini)
 - `BACKEND_HOST`: Server host (default: 0.0.0.0)
 - `BACKEND_PORT`: Server port (default: 8000)
+
+### Local LLM Setup (Optional)
+
+To use the local LLM feature with Ollama:
+
+1. **Install Ollama:**
+   ```bash
+   # macOS
+   brew install ollama
+   
+   # Linux
+   curl -fsSL https://ollama.ai/install.sh | sh
+   ```
+
+2. **Pull the Phi-3 Mini model:**
+   ```bash
+   ollama pull phi3:mini
+   ```
+
+3. **Start Ollama server:**
+   ```bash
+   ollama serve
+   ```
+
+4. **Configure environment variables:**
+   ```bash
+   # In your .env file
+   OLLAMA_URL=http://localhost:11434
+   OLLAMA_MODEL=phi3:mini
+   ```
 
 **⚠️ Security Note:** Never commit your `.env` file to version control. The `.env` file is already added to `.gitignore`.
 
@@ -60,11 +92,11 @@ The server will start on http://localhost:8000
 ### **spaCy Fine-tuned Model**
 
 **Advantages:**
-- ✅ Fast training and inference
-- ✅ Built-in tokenization and preprocessing
-- ✅ Easy to use and deploy
-- ✅ Good for domain adaptation
-- ✅ Lightweight and efficient
+-  Fast training and inference
+-  Built-in tokenization and preprocessing
+-  Easy to use and deploy
+-  Good for domain adaptation
+-  Lightweight and efficient
 
 **Disadvantages:**
 - ❌ Limited to spaCy's architecture
@@ -81,11 +113,11 @@ The server will start on http://localhost:8000
 ### **BERT-based Model**
 
 **Advantages:**
-- ✅ State-of-the-art performance on many NLP tasks
-- ✅ Excellent contextual understanding
-- ✅ Pre-trained on massive amounts of text
-- ✅ Handles out-of-vocabulary words well
-- ✅ Strong transfer learning capabilities
+-  State-of-the-art performance on many NLP tasks
+-  Excellent contextual understanding
+-  Pre-trained on massive amounts of text
+-  Handles out-of-vocabulary words well
+-  Strong transfer learning capabilities
 
 **Disadvantages:**
 - ❌ Large model size (110M+ parameters)
@@ -102,11 +134,11 @@ The server will start on http://localhost:8000
 ### **BiLSTM-CRF Model**
 
 **Advantages:**
-- ✅ Customizable architecture
-- ✅ Good at capturing sequential dependencies
-- ✅ CRF layer optimizes label transitions
-- ✅ Character-level features handle spelling variations
-- ✅ Interpretable and controllable
+-  Customizable architecture
+-  Good at capturing sequential dependencies
+-  CRF layer optimizes label transitions
+-  Character-level features handle spelling variations
+-  Interpretable and controllable
 
 **Disadvantages:**
 - ❌ Requires more manual feature engineering
