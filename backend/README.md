@@ -164,7 +164,7 @@ To use the local LLM feature with Ollama:
 | **Customization** | Limited | Medium | High |
 | **Deployment** | Easy | Medium | Medium |
 
-## 🏗️ Technical Architecture Differences
+## Technical Architecture Differences
 
 ### **spaCy Model Architecture:**
 ```
