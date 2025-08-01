@@ -2,7 +2,7 @@
 
 This project implements three different Named Entity Recognition (NER) approaches for extracting key information from lease documents. Each model uses a different technique to achieve the same goal of identifying entities like lessor names, lessee names, property addresses, dates, and amounts.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Environment Setup
 
@@ -65,9 +65,9 @@ To use the local LLM feature with Ollama:
    OLLAMA_MODEL=phi3:mini
    ```
 
-**⚠️ Security Note:** Never commit your `.env` file to version control. The `.env` file is already added to `.gitignore`.
+**Security Note:** Never commit your `.env` file to version control. The `.env` file is already added to `.gitignore`.
 
-## 📊 Model Overview
+## Model Overview
 
 ### 1. **spaCy Fine-tuned Model** (`fine_tuned_NER.ipynb`)
 - **Technique**: Transfer Learning with spaCy
@@ -87,7 +87,7 @@ To use the local LLM feature with Ollama:
 - **Approach**: Character-level + word-level embeddings with BiLSTM and CRF
 - **Architecture**: Bidirectional LSTM with Conditional Random Fields
 
-## 🔍 Detailed Comparison
+## Detailed Comparison
 
 ### **spaCy Fine-tuned Model**
 
@@ -99,10 +99,10 @@ To use the local LLM feature with Ollama:
 -  Lightweight and efficient
 
 **Disadvantages:**
-- ❌ Limited to spaCy's architecture
-- ❌ Less flexible for custom modifications
-- ❌ May not capture complex contextual relationships
-- ❌ Dependent on spaCy's pre-trained weights
+- Limited to spaCy's architecture
+- Less flexible for custom modifications
+- May not capture complex contextual relationships
+- Dependent on spaCy's pre-trained weights
 
 **Best Use Cases:**
 - Quick prototyping
@@ -120,10 +120,10 @@ To use the local LLM feature with Ollama:
 -  Strong transfer learning capabilities
 
 **Disadvantages:**
-- ❌ Large model size (110M+ parameters)
-- ❌ Slower inference compared to lighter models
-- ❌ Higher computational requirements
-- ❌ Requires more training data for optimal performance
+- Large model size (110M+ parameters)
+- Slower inference compared to lighter models
+- Higher computational requirements
+- Requires more training data for optimal performance
 
 **Best Use Cases:**
 - When accuracy is the primary concern
@@ -141,10 +141,10 @@ To use the local LLM feature with Ollama:
 -  Interpretable and controllable
 
 **Disadvantages:**
-- ❌ Requires more manual feature engineering
-- ❌ Training from scratch (no pre-trained weights)
-- ❌ May need more data to achieve good performance
-- ❌ More complex to implement and debug
+- Requires more manual feature engineering
+- Training from scratch (no pre-trained weights)
+- May need more data to achieve good performance
+- More complex to implement and debug
 
 **Best Use Cases:**
 - When you need full control over the model architecture
@@ -152,7 +152,7 @@ To use the local LLM feature with Ollama:
 - When you have domain-specific requirements
 - When interpretability is important
 
-## 📈 Performance Comparison
+## Performance Comparison
 
 | Aspect | spaCy Fine-tuned | BERT-based | BiLSTM-CRF |
 |--------|------------------|------------|-------------|
@@ -181,7 +181,7 @@ Input Text → BERT Tokenizer → BERT Encoder → Token Classification Head →
 Input Text → Word Embeddings + Char LSTM → BiLSTM → Linear Layer → CRF → NER Labels
 ```
 
-## 🎯 Entity Types Supported
+## Entity Types Supported
 
 All three models are trained to recognize the following entity types:
 - `LESSOR_NAME`: Landlord/Property owner names
@@ -192,7 +192,7 @@ All three models are trained to recognize the following entity types:
 - `RENT_AMOUNT`: Monthly rent amounts
 - `SECURITY_DEPOSIT_AMOUNT`: Security deposit amounts
 
-## 🚀 Usage Instructions
+## Usage Instructions
 
 ### Running the Models
 
@@ -221,7 +221,7 @@ Each model saves its trained weights in different formats:
 - **BERT**: `bert_lease_ner_model/` directory
 - **BiLSTM-CRF**: `bilstm_crf_lease_ner_model.pth` and `bilstm_crf_vocab.pkl`
 
-## 📊 Analysis Report
+## Analysis Report
 
 ### **Training Data Analysis**
 - **Dataset Size**: [Number] lease documents
@@ -246,7 +246,7 @@ Each model saves its trained weights in different formats:
 - **Edge Cases**: Challenging scenarios for each approach
 - **Improvement Areas**: Where each model could be enhanced
 
-## 🔧 Integration with Frontend
+## Integration with Frontend
 
 The current FastAPI backend uses the spaCy model by default. To switch to other models:
 
@@ -258,7 +258,7 @@ The current FastAPI backend uses the spaCy model by default. To switch to other 
    - Install PyTorch: `pip install torch`
    - Modify `main.py` to load BiLSTM-CRF model
 
-## 📝 Recommendations
+## Recommendations
 
 ### **For Production Use:**
 - **High Accuracy Required**: Use BERT-based model
@@ -275,7 +275,7 @@ The current FastAPI backend uses the spaCy model by default. To switch to other 
 - **Limited Memory**: spaCy fine-tuned
 - **Limited Storage**: spaCy fine-tuned
 
-## 🔮 Future Improvements
+## Future Improvements
 
 1. **Ensemble Methods**: Combine predictions from all three models
 2. **Active Learning**: Continuously improve models with new data
@@ -283,7 +283,7 @@ The current FastAPI backend uses the spaCy model by default. To switch to other 
 4. **Multi-language Support**: Extend to other languages
 5. **Real-time Processing**: Optimize for streaming document processing
 
-## 📚 References
+## References
 
 - spaCy Documentation: https://spacy.io/
 - Hugging Face Transformers: https://huggingface.co/transformers/
