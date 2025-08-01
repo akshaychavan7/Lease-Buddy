@@ -1,8 +1,8 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { Box, Paper, TextField, IconButton, Typography, Avatar, Divider, Chip, useTheme, Fade, Zoom, Button } from "@mui/material"
-import { Send, Person, SmartToy, Chat, AutoAwesome, Lightbulb, Help } from "@mui/icons-material"
+import { Box, Paper, TextField, IconButton, Typography, Avatar, Divider, Chip, useTheme, Fade, Zoom, Button, Switch, FormControlLabel } from "@mui/material"
+import { Send, Person, SmartToy, Chat, AutoAwesome, Lightbulb, Help, Cloud, Computer } from "@mui/icons-material"
 import ReactMarkdown from "react-markdown"
 
 interface ChatMessage {
@@ -32,6 +32,7 @@ export default function ChatInterface({ filename, documentContent }: ChatInterfa
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [useLocalLLM, setUseLocalLLM] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -52,7 +53,8 @@ export default function ChatInterface({ filename, documentContent }: ChatInterfa
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const apiEndpoint = useLocalLLM ? "/api/chat/local" : "/api/chat";
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -158,31 +160,7 @@ export default function ChatInterface({ filename, documentContent }: ChatInterfa
           overflow: "hidden",
         }}
       >
-        {/* Background decoration */}
-        <Box
-          sx={{
-            position: "absolute",
-            top: -50,
-            right: -50,
-            width: 100,
-            height: 100,
-            borderRadius: "50%",
-            background: "rgba(255,255,255,0.1)",
-            zIndex: 0,
-          }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: -30,
-            left: -30,
-            width: 60,
-            height: 60,
-            borderRadius: "50%",
-            background: "rgba(255,255,255,0.05)",
-            zIndex: 0,
-          }}
-        />
+        
 
         <Box sx={{ display: "flex", alignItems: "center", gap: 2, position: "relative", zIndex: 1 }}>
           <Avatar
@@ -222,6 +200,38 @@ export default function ChatInterface({ filename, documentContent }: ChatInterfa
               },
             }}
           />
+          
+          {/* LLM Toggle */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, ml: 2 }}>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={useLocalLLM}
+                  onChange={(e) => setUseLocalLLM(e.target.checked)}
+                  sx={{
+                    "& .MuiSwitch-switchBase.Mui-checked": {
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "rgba(255,255,255,0.1)",
+                      },
+                    },
+                    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+                      backgroundColor: "rgba(255,255,255,0.3)",
+                    },
+                  }}
+                />
+              }
+              label={
+                <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "white" }}>
+                  {useLocalLLM ? <Computer sx={{ fontSize: 16 }} /> : <Cloud sx={{ fontSize: 16 }} />}
+                  <Typography variant="caption" sx={{ fontWeight: 600 }}>
+                    {useLocalLLM ? "Local" : "Cloud"}
+                  </Typography>
+                </Box>
+              }
+              sx={{ margin: 0 }}
+            />
+          </Box>
         </Box>
       </Box>
 
@@ -256,6 +266,14 @@ export default function ChatInterface({ filename, documentContent }: ChatInterfa
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 500, mx: "auto" }}>
                 I can help you understand and analyze your document content. Ask me anything about the lease agreement.
+                {useLocalLLM && (
+                  <Box sx={{ mt: 1, display: "flex", alignItems: "center", gap: 1, justifyContent: "center" }}>
+                    <Computer sx={{ fontSize: 16, color: "primary.main" }} />
+                    <Typography variant="caption" color="primary.main" sx={{ fontWeight: 600 }}>
+                      Using Local LLM (Phi-3 Mini)
+                    </Typography>
+                  </Box>
+                )}
               </Typography>
 
               {/* Suggested Questions */}

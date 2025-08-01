@@ -31,7 +31,7 @@ const EntityDisplay = ({ entities, filename, onReset }) => {
 
       {totalEntities === 0 ? (
         <div className="no-entities">
-          <div className="no-entities-icon">✅</div>
+          <div className="no-entities-icon"></div>
           <h3 className="no-entities-title">No Named Entities Found</h3>
           <p className="no-entities-description">
             The document was processed but no recognizable entities were identified.

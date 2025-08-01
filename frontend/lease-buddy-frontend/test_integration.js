@@ -10,7 +10,7 @@ async function testIntegration() {
   try {
     const healthResponse = await fetch('http://localhost:8000/health');
     const healthData = await healthResponse.json();
-    console.log('✅ Backend Health:', healthData);
+    console.log(' Backend Health:', healthData);
   } catch (error) {
     console.log('❌ Backend Health Check Failed:', error.message);
     return;
@@ -21,7 +21,7 @@ async function testIntegration() {
   try {
     const entityTypesResponse = await fetch('http://localhost:8000/entity-types');
     const entityTypesData = await entityTypesResponse.json();
-    console.log('✅ Entity Types:', entityTypesData.entity_types);
+    console.log(' Entity Types:', entityTypesData.entity_types);
   } catch (error) {
     console.log('❌ Entity Types Check Failed:', error.message);
   }
@@ -54,7 +54,7 @@ Upon execution of this Agreement, Tenant shall deposit with Landlord the sum of 
     });
 
     const nerData = await nerResponse.json();
-    console.log('✅ NER Extraction Results:');
+    console.log(' NER Extraction Results:');
     nerData.entities.forEach(entity => {
       console.log(`   - ${entity.text} (${entity.label})`);
     });
@@ -75,7 +75,7 @@ Upon execution of this Agreement, Tenant shall deposit with Landlord the sum of 
     });
 
     const uploadData = await uploadResponse.json();
-    console.log('✅ Upload API Response:', uploadData.success);
+    console.log(' Upload API Response:', uploadData.success);
     if (uploadData.entities) {
       console.log('   Extracted Entities:');
       Object.entries(uploadData.entities).forEach(([type, values]) => {

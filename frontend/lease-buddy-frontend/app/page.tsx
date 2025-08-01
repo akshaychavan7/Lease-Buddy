@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Container, Paper, Typography, Box, Alert, Fade } from "@mui/material"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
+import { Description, AutoAwesome, Security, Chat, Upload } from "@mui/icons-material"
 import DocumentUpload from "./components/DocumentUpload"
 import EntityDisplay from "./components/EntityDisplay"
 import ChatInterface from "./components/ChatInterface"
@@ -161,80 +162,177 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{ py: 6 }}>
+      <Box sx={{ minHeight: "100vh" }}>
         <Fade in={true} timeout={800}>
-          <Paper elevation={4} sx={{ 
-            p: 5, 
-            borderRadius: 4,
-            background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)",
-            border: "1px solid",
-            borderColor: "divider",
-            position: "relative",
-            overflow: "hidden",
-          }}>
-            {/* Background decoration */}
-            <Box
-              sx={{
-                position: "absolute",
-                top: -200,
-                right: -200,
-                width: 400,
-                height: 400,
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, rgba(37, 99, 235, 0) 70%)",
-                zIndex: 0,
-                animation: "float 8s ease-in-out infinite",
-                "@keyframes float": {
-                  "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-                  "50%": { transform: "translateY(-30px) rotate(180deg)" },
-                }
-              }}
-            />
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: -150,
-                left: -150,
-                width: 300,
-                height: 300,
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(219, 39, 119, 0.05) 0%, rgba(219, 39, 119, 0) 70%)",
-                zIndex: 0,
-                animation: "float 10s ease-in-out infinite reverse",
-              }}
-            />
+          <Box>
+              {/* Adobe-style Navbar Header */}
+              <Box sx={{ 
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1000,
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                backdropFilter: "blur(10px)",
+                borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+              }}>
+                <Container maxWidth="xl">
+                  <Box sx={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    justifyContent: "space-between",
+                    py: 2,
+                    px: 3,
+                  }}>
+                    {/* Logo and Brand */}
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                      <Box
+                        sx={{
+                          width: 40,
+                          height: 40,
+                          borderRadius: "8px",
+                          background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          boxShadow: "0 2px 8px rgba(37, 99, 235, 0.3)",
+                        }}
+                      >
+                        <Description sx={{ fontSize: 24, color: "white" }} />
+                      </Box>
+                      <Typography variant="h6" sx={{ 
+                        fontWeight: 700,
+                        color: "text.primary",
+                        letterSpacing: "-0.02em",
+                      }}>
+                        LeaseBuddy
+                      </Typography>
+                    </Box>
 
-            <Box sx={{ position: "relative", zIndex: 1 }}>
-              {/* Header */}
-              <Box sx={{ textAlign: "center", mb: 6 }}>
-                <Typography variant="h2" component="h1" gutterBottom sx={{ 
-                  fontWeight: 700,
-                  background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  mb: 2,
-                }}>
-                  Lease Buddy
-                </Typography>
+                    {/* Navigation Items - Only show when details are loaded */}
+                    {processingState === "complete" && entities && uploadedFile && (
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                            px: 3,
+                            py: 1.5,
+                            borderRadius: "8px",
+                            backgroundColor: "rgba(37, 99, 235, 0.08)",
+                            border: "1px solid rgba(37, 99, 235, 0.15)",
+                            cursor: "pointer",
+                            transition: "all 0.2s ease",
+                            "&:hover": {
+                              backgroundColor: "rgba(37, 99, 235, 0.12)",
+                              borderColor: "rgba(37, 99, 235, 0.25)",
+                              transform: "translateY(-1px)",
+                              boxShadow: "0 4px 12px rgba(37, 99, 235, 0.15)",
+                            },
+                          }}
+                          onClick={() => {
+                            document.getElementById('lease-details')?.scrollIntoView({ 
+                              behavior: 'smooth' 
+                            });
+                          }}
+                        >
+                          <Description sx={{ fontSize: 16, color: "primary.main" }} />
+                          <Typography 
+                            variant="body2" 
+                            sx={{ 
+                              color: "primary.main",
+                              fontWeight: 600,
+                              fontSize: "0.875rem",
+                            }}
+                          >
+                            Lease Details
+                          </Typography>
+                        </Box>
+                        
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                            px: 3,
+                            py: 1.5,
+                            borderRadius: "8px",
+                            backgroundColor: "rgba(219, 39, 119, 0.08)",
+                            border: "1px solid rgba(219, 39, 119, 0.15)",
+                            cursor: "pointer",
+                            transition: "all 0.2s ease",
+                            "&:hover": {
+                              backgroundColor: "rgba(219, 39, 119, 0.12)",
+                              borderColor: "rgba(219, 39, 119, 0.25)",
+                              transform: "translateY(-1px)",
+                              boxShadow: "0 4px 12px rgba(219, 39, 119, 0.15)",
+                            },
+                          }}
+                          onClick={() => {
+                            document.getElementById('chat-section')?.scrollIntoView({ 
+                              behavior: 'smooth' 
+                            });
+                          }}
+                        >
+                          <Chat sx={{ fontSize: 16, color: "secondary.main" }} />
+                          <Typography 
+                            variant="body2" 
+                            sx={{ 
+                              color: "secondary.main",
+                              fontWeight: 600,
+                              fontSize: "0.875rem",
+                            }}
+                          >
+                            Chat
+                          </Typography>
+                        </Box>
+                      </Box>
+                    )}
 
-                <Typography variant="h5" color="text.secondary" sx={{ 
-                  mb: 3,
-                  fontWeight: 400,
-                  maxWidth: 600,
-                  mx: "auto",
-                  lineHeight: 1.5,
-                }}>
-                  Upload your lease document to extract key information and chat with an AI assistant
-                </Typography>
 
-                <Typography variant="body1" color="text.secondary" sx={{ 
-                  opacity: 0.8,
-                  maxWidth: 500,
-                  mx: "auto",
-                }}>
-                  Our AI-powered system automatically identifies important lease details like parties, dates, amounts, and more
-                </Typography>
+                  </Box>
+                </Container>
+              </Box>
+
+              {/* Main Content with Top Spacing */}
+              <Box sx={{ pt: 12, pb: 6 }}>
+                {/* Hero Section - Only show on upload state */}
+                {processingState === "upload" && (
+                  <Box sx={{ textAlign: "center", mb: 8 }}>
+                    <Typography variant="h1" sx={{ 
+                      fontWeight: 800,
+                      fontSize: "3.5rem",
+                      lineHeight: 1.1,
+                      color: "text.primary",
+                      mb: 3,
+                      letterSpacing: "-0.03em",
+                    }}>
+                      Intelligent Lease
+                      <br />
+                      <Box component="span" sx={{ 
+                        background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                      }}>
+                        Document Analysis
+                      </Box>
+                    </Typography>
+
+                    <Typography variant="h5" sx={{ 
+                      fontWeight: 400,
+                      color: "text.secondary",
+                      maxWidth: 600,
+                      mx: "auto",
+                      lineHeight: 1.5,
+                      mb: 4,
+                    }}>
+                      Extract key information from lease documents with AI-powered precision and chat with intelligent insights
+                    </Typography>
+                  </Box>
+                )}
               </Box>
 
               {error && (
@@ -247,7 +345,7 @@ export default function Home() {
 
               {processingState === "upload" && (
                 <Fade in={true} timeout={600}>
-                  <Box>
+                  <Box sx={{ px: 3, py: 4 }}>
                     <DocumentUpload
                       onUploadStart={handleUploadStart}
                       onUploadSuccess={handleUploadSuccess}
@@ -260,7 +358,7 @@ export default function Home() {
 
               {processingState === "processing" && (
                 <Fade in={true} timeout={600}>
-                  <Box>
+                  <Box sx={{ px: 3, py: 4 }}>
                     <ProcessingLoader currentStep={processingStep} onReset={handleReset} />
                   </Box>
                 </Fade>
@@ -268,7 +366,7 @@ export default function Home() {
 
               {processingState === "error" && (
                 <Fade in={true} timeout={600}>
-                  <Box sx={{ textAlign: "center", py: 6 }}>
+                  <Box sx={{ textAlign: "center", py: 6, px: 3 }}>
                     <Typography variant="h5" color="error" gutterBottom sx={{ fontWeight: 600 }}>
                       Processing Failed
                     </Typography>
@@ -291,61 +389,14 @@ export default function Home() {
 
               {processingState === "complete" && entities && uploadedFile && (
                 <Fade in={true} timeout={800}>
-                  <Box sx={{ maxWidth: 1400, mx: "auto" }}>
-                    <Box sx={{ mb: 6 }}>
+                  <Box sx={{ maxWidth: 1400, mx: "auto", px: 3, py: 4 }}>
+                    <Box id="lease-details" sx={{ mb: 6 }}>
                       <EntityDisplay entities={entities} filename={uploadedFile.filename} onReset={handleReset} />
                     </Box>
                     
-                    {/* Divider with enhanced styling */}
-                    <Box 
-                      sx={{ 
-                        position: "relative",
-                        my: 8,
-                        "&::before": {
-                          content: '""',
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          transform: "translate(-50%, -50%)",
-                          width: "100%",
-                          height: 1,
-                          background: "linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.2) 20%, rgba(37, 99, 235, 0.4) 50%, rgba(37, 99, 235, 0.2) 80%, transparent 100%)",
-                        },
-                        "&::after": {
-                          content: '""',
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          transform: "translate(-50%, -50%)",
-                          width: 60,
-                          height: 60,
-                          borderRadius: "50%",
-                          background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
-                          zIndex: 1,
-                        }
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          transform: "translate(-50%, -50%)",
-                          zIndex: 2,
-                          color: "white",
-                          fontSize: 24,
-                        }}
-                      >
-                        💬
-                      </Box>
-                    </Box>
                     
                     <Fade in={true} timeout={1000}>
-                      <Box>
+                      <Box id="chat-section" sx={{ mt: 4 }}>
                         <ChatInterface filename={uploadedFile.filename} documentContent={uploadedFile.fullContent} />
                       </Box>
                     </Fade>
@@ -353,9 +404,8 @@ export default function Home() {
                 </Fade>
               )}
             </Box>
-          </Paper>
-        </Fade>
-      </Container>
-    </ThemeProvider>
-  )
-}
+          </Fade>
+        </Box>
+      </ThemeProvider>
+    )
+  }
