@@ -1,5 +1,5 @@
 [{
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd1.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd1.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 114,
@@ -32,7 +32,7 @@
     }
 },
 {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd2.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd2.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 127,
@@ -65,7 +65,7 @@
     }
 },
 {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd3.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd3.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 122,
@@ -98,7 +98,7 @@
     }
 },
     {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd4.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd4.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 125,
@@ -131,7 +131,7 @@
     }
 },
 {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd6.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd6.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 158,
@@ -164,7 +164,7 @@
     }
 },
     {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd7.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd7.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 133,
@@ -198,7 +198,7 @@
 },
     
 {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd8.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd8.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 120,
@@ -231,7 +231,7 @@
     }
 },
 {
-    "file_path": "\\backend\\models\\NER\\Master Dataset\\vsd10.docx",
+    "file_path": "/backend/models/NER/Master Dataset/vsd10.docx",
     "entities": {
         "LESSOR_NAME": {
             "start": 122,
