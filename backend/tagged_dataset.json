@@ -3,32 +3,32 @@
         "file_path": "./datasets/dataset-master/Lease_Agreement_1.docx",
         "entities": {
             "LESSOR_NAME": {
-                "start": 123,
-                "end": 138
+                "start": 120,
+                "end": 135
             },
             "LESSEE_NAME": {
-                "start": 160,
-                "end": 174
+                "start": 157,
+                "end": 172
             },
             "PROPERTY_ADDRESS": {
-                "start": 275,
-                "end": 307
+                "start": 271,
+                "end": 303
             },
             "LEASE_START_DATE": {
-                "start": 367,
-                "end": 379
+                "start": 362,
+                "end": 374
             },
             "LEASE_END_DATE": {
-                "start": 403,
-                "end": 415
+                "start": 398,
+                "end": 410
             },
             "RENT_AMOUNT": {
-                "start": 537,
-                "end": 542
+                "start": 530,
+                "end": 536
             },
             "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 779,
-                "end": 784
+                "start": 772,
+                "end": 777
             }
         }
     },
@@ -36,259 +36,28 @@
         "file_path": "./datasets/dataset-master/Lease_Agreement_2.docx",
         "entities": {
             "LESSOR_NAME": {
-                "start": 128,
-                "end": 140
-            },
-            "LESSEE_NAME": {
-                "start": 162,
-                "end": 176
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 277,
-                "end": 313
-            },
-            "LEASE_START_DATE": {
-                "start": 373,
-                "end": 390
-            },
-            "LEASE_END_DATE": {
-                "start": 414,
-                "end": 431
-            },
-            "RENT_AMOUNT": {
-                "start": 553,
-                "end": 558
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 795,
-                "end": 800
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_3.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 129,
-                "end": 141
-            },
-            "LESSEE_NAME": {
-                "start": 163,
-                "end": 176
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 277,
-                "end": 315
-            },
-            "LEASE_START_DATE": {
-                "start": 375,
-                "end": 393
-            },
-            "LEASE_END_DATE": {
-                "start": 417,
-                "end": 435
-            },
-            "RENT_AMOUNT": {
-                "start": 557,
-                "end": 562
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 799,
-                "end": 804
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_4.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 123,
-                "end": 138
-            },
-            "LESSEE_NAME": {
-                "start": 160,
-                "end": 175
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 276,
-                "end": 307
-            },
-            "LEASE_START_DATE": {
-                "start": 367,
-                "end": 379
-            },
-            "LEASE_END_DATE": {
-                "start": 403,
-                "end": 415
-            },
-            "RENT_AMOUNT": {
-                "start": 537,
-                "end": 542
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 779,
-                "end": 784
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_5.docx",
-        "entities": {
-            "LESSOR_NAME": {
                 "start": 125,
-                "end": 135
+                "end": 137
             },
             "LESSEE_NAME": {
-                "start": 157,
-                "end": 168
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 269,
-                "end": 303
-            },
-            "LEASE_START_DATE": {
-                "start": 363,
-                "end": 377
-            },
-            "LEASE_END_DATE": {
-                "start": 401,
-                "end": 415
-            },
-            "RENT_AMOUNT": {
-                "start": 537,
-                "end": 542
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 779,
-                "end": 784
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_6.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 127,
-                "end": 139
-            },
-            "LESSEE_NAME": {
-                "start": 161,
-                "end": 172
+                "start": 159,
+                "end": 173
             },
             "PROPERTY_ADDRESS": {
                 "start": 273,
-                "end": 314
-            },
-            "LEASE_START_DATE": {
-                "start": 374,
-                "end": 390
-            },
-            "LEASE_END_DATE": {
-                "start": 414,
-                "end": 430
-            },
-            "RENT_AMOUNT": {
-                "start": 552,
-                "end": 557
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 794,
-                "end": 799
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_7.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 129,
-                "end": 142
-            },
-            "LESSEE_NAME": {
-                "start": 164,
-                "end": 174
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 275,
-                "end": 308
+                "end": 309
             },
             "LEASE_START_DATE": {
                 "start": 368,
                 "end": 386
             },
             "LEASE_END_DATE": {
-                "start": 410,
-                "end": 428
-            },
-            "RENT_AMOUNT": {
-                "start": 550,
-                "end": 555
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 792,
-                "end": 797
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_8.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 127,
-                "end": 140
-            },
-            "LESSEE_NAME": {
-                "start": 162,
-                "end": 173
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 274,
-                "end": 311
-            },
-            "LEASE_START_DATE": {
-                "start": 371,
-                "end": 387
-            },
-            "LEASE_END_DATE": {
-                "start": 411,
-                "end": 427
-            },
-            "RENT_AMOUNT": {
-                "start": 549,
-                "end": 554
-            },
-            "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 791,
-                "end": 796
-            }
-        }
-    },
-    {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_9.docx",
-        "entities": {
-            "LESSOR_NAME": {
-                "start": 126,
-                "end": 137
-            },
-            "LESSEE_NAME": {
-                "start": 159,
-                "end": 174
-            },
-            "PROPERTY_ADDRESS": {
-                "start": 275,
-                "end": 310
-            },
-            "LEASE_START_DATE": {
-                "start": 370,
-                "end": 385
-            },
-            "LEASE_END_DATE": {
                 "start": 409,
-                "end": 424
+                "end": 426
             },
             "RENT_AMOUNT": {
-                "start": 546,
-                "end": 551
+                "start": 547,
+                "end": 552
             },
             "SECURITY_DEPOSIT_AMOUNT": {
                 "start": 788,
@@ -297,35 +66,266 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_10.docx",
+        "file_path": "./datasets/dataset-master/Lease_Agreement_3.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 126,
-                "end": 141
+                "end": 138
             },
             "LESSEE_NAME": {
-                "start": 163,
-                "end": 175
+                "start": 160,
+                "end": 174
             },
             "PROPERTY_ADDRESS": {
-                "start": 276,
-                "end": 313
+                "start": 273,
+                "end": 311
             },
             "LEASE_START_DATE": {
-                "start": 373,
+                "start": 370,
                 "end": 388
             },
             "LEASE_END_DATE": {
                 "start": 412,
-                "end": 427
+                "end": 430
             },
             "RENT_AMOUNT": {
-                "start": 549,
-                "end": 554
+                "start": 551,
+                "end": 556
             },
             "SECURITY_DEPOSIT_AMOUNT": {
-                "start": 791,
-                "end": 796
+                "start": 792,
+                "end": 797
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_4.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 119,
+                "end": 135
+            },
+            "LESSEE_NAME": {
+                "start": 157,
+                "end": 173
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 272,
+                "end": 303
+            },
+            "LEASE_START_DATE": {
+                "start": 362,
+                "end": 374
+            },
+            "LEASE_END_DATE": {
+                "start": 398,
+                "end": 410
+            },
+            "RENT_AMOUNT": {
+                "start": 531,
+                "end": 536
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 772,
+                "end": 779
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_5.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 122,
+                "end": 133
+            },
+            "LESSEE_NAME": {
+                "start": 154,
+                "end": 166
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 265,
+                "end": 299
+            },
+            "LEASE_START_DATE": {
+                "start": 358,
+                "end": 373
+            },
+            "LEASE_END_DATE": {
+                "start": 396,
+                "end": 410
+            },
+            "RENT_AMOUNT": {
+                "start": 531,
+                "end": 536
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 772,
+                "end": 778
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_6.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 124,
+                "end": 136
+            },
+            "LESSEE_NAME": {
+                "start": 158,
+                "end": 169
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 269,
+                "end": 310
+            },
+            "LEASE_START_DATE": {
+                "start": 369,
+                "end": 386
+            },
+            "LEASE_END_DATE": {
+                "start": 409,
+                "end": 425
+            },
+            "RENT_AMOUNT": {
+                "start": 546,
+                "end": 551
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 787,
+                "end": 792
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_7.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 126,
+                "end": 139
+            },
+            "LESSEE_NAME": {
+                "start": 160,
+                "end": 172
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 271,
+                "end": 304
+            },
+            "LEASE_START_DATE": {
+                "start": 363,
+                "end": 384
+            },
+            "LEASE_END_DATE": {
+                "start": 405,
+                "end": 423
+            },
+            "RENT_AMOUNT": {
+                "start": 544,
+                "end": 549
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 785,
+                "end": 790
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_8.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 124,
+                "end": 138
+            },
+            "LESSEE_NAME": {
+                "start": 159,
+                "end": 170
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 270,
+                "end": 307
+            },
+            "LEASE_START_DATE": {
+                "start": 366,
+                "end": 382
+            },
+            "LEASE_END_DATE": {
+                "start": 406,
+                "end": 422
+            },
+            "RENT_AMOUNT": {
+                "start": 543,
+                "end": 548
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 784,
+                "end": 790
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_9.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 135
+            },
+            "LESSEE_NAME": {
+                "start": 156,
+                "end": 172
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 271,
+                "end": 306
+            },
+            "LEASE_START_DATE": {
+                "start": 365,
+                "end": 380
+            },
+            "LEASE_END_DATE": {
+                "start": 404,
+                "end": 419
+            },
+            "RENT_AMOUNT": {
+                "start": 540,
+                "end": 545
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 781,
+                "end": 786
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/Lease_Agreement_10.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 138
+            },
+            "LESSEE_NAME": {
+                "start": 160,
+                "end": 173
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 272,
+                "end": 309
+            },
+            "LEASE_START_DATE": {
+                "start": 368,
+                "end": 384
+            },
+            "LEASE_END_DATE": {
+                "start": 407,
+                "end": 422
+            },
+            "RENT_AMOUNT": {
+                "start": 543,
+                "end": 548
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 784,
+                "end": 790
             }
         }
     },

@@ -1,0 +1,74 @@
+FILE_PATH,LESSOR_NAME,LESSEE_NAME,PROPERTY_ADDRESS,LEASE_START_DATE,LEASE_END_DATE,RENT_AMOUNT,SECURITY_DEPOSIT_AMOUNT
+./datasets/dataset-master/Lease_Agreement_1.docx,Ashley Martinez,Sarah Williams ,"5316 Pine Rd, Franklin, CA 70457","May 26, 2025","May 26, 2026", $1038,$1245
+./datasets/dataset-master/Lease_Agreement_2.docx,Ashley Jones,Jessica Miller,"538 Spruce Ct, Springfield, NY 82660","December 16, 2024 ","December 16, 2025",$1746,$2095
+./datasets/dataset-master/Lease_Agreement_3.docx,Brian Miller,Amanda Garcia ,"1807 Chestnut Blvd, Fairview, CA 68967","September 20, 2024","September 20, 2025",$2611,$3133
+./datasets/dataset-master/Lease_Agreement_4.docx, David Hernandez,Michael Johnson ,"2658 Elm St, Franklin, GA 71686","May 28, 2025","May 28, 2026",$3330,$3996 a
+./datasets/dataset-master/Lease_Agreement_5.docx,John Davis ,James Jones ,"7056 Pine Rd, Greenville, PA 75931","March 17, 2025 ","March 17, 2026",$3285,$3942 
+./datasets/dataset-master/Lease_Agreement_6.docx,Sarah Garcia,Sarah Brown,"6062 Chestnut Blvd, Springfield, OH 96840","January 13, 2025 ","January 13, 2026",$2564,$3076
+./datasets/dataset-master/Lease_Agreement_7.docx,Ashley Garcia, John Brown ,"1376 Elm St, Georgetown, NY 64715","September 20, 2024 an","September 20, 2025",$2935,$3522
+./datasets/dataset-master/Lease_Agreement_8.docx,Jessica Davis ,Brian Davis,"2322 Chestnut Blvd, Clinton, CA 79789","October 10, 2024","October 10, 2025",$2866,$3439 
+./datasets/dataset-master/Lease_Agreement_9.docx,James Smith ,Amanda Martinez ,"3658 Cedar Ln, Greenville, FL 68317","August 24, 2024","August 24, 2025",$1900,$2280
+./datasets/dataset-master/Lease_Agreement_10.docx,Jessica Johnson,Ashley Davis ,"8997 Birch Way, Springfield, CA 53353","August 27, 2024 ","August 27, 2025",$1846,$2215 
+./datasets/dataset-master/Lease_Agreement_11.docx,Akshay Chavan,David Hernandez,"1890 Elm St, Fairview, IL 82555","June 19, 2025","June 19, 2026",$1258,$1509
+./datasets/dataset-master/Lease_Agreement_12.docx,Amanda Smith,Brian Garcia,"2710 Cedar Ln, Riverside, PA 58789","February 01, 2025","February 01, 2026",$1373,$1647
+./datasets/dataset-master/Lease_Agreement_13.docx,Sarah Brown,Ashley Williams,"1082 Spruce Ct, Fairview, CA 22954","March 26, 2025","March 26, 2026",$1365,$1638
+./datasets/dataset-master/Lease_Agreement_14.docx,Emily Martinez,Michael Hernandez,"3044 Oak St, Fairview, OH 38387","April 17, 2025","April 17, 2026",$1570,$1884
+./datasets/dataset-master/Lease_Agreement_15.docx,James Martinez,Jessica Davis,"9028 Pine Rd, Greenville, GA 61026","November 02, 2024","November 02, 2025",$2110,$2532
+./datasets/dataset-master/Lease_Agreement_16.docx,David Smith,John Hernandez,"3578 Maple Ave, Springfield, IL 30974","June 09, 2025","June 09, 2026",$1198,$1437 
+./datasets/dataset-master/Lease_Agreement_17.docx,Brian Miller,Emily Jones,"5749 Chestnut Blvd, Madison, IL 65626","October 24, 2024","October 24, 2025",$2472,$2966
+./datasets/dataset-master/Lease_Agreement_18.docx,John Hernandez,Amanda Brown,"2832 Oak St, Clinton, FL 68317","October 20, 2024","October 20, 2025",$3428,$4113
+./datasets/dataset-master/Lease_Agreement_20.docx,Jenny Hernandez,Jessica Smith,"7865 Maple Ave, Springfield, FL 78671","December 25, 2024","December 25, 2025",$1043,$1251
+./datasets/dataset-master/Lease_Agreement_21.docx,David Brown,Emily Williams,"7723 Maple Ave, Riverside, CA 72668","May 06, 2025","May 06, 2026",$1380,$1656
+./datasets/dataset-master/Lease_Agreement_22.docx,Sarah Jones,Emily Hernandez,"2078 Spruce Ct, Franklin, PA 76653","August 27, 2024","August 27, 2025",$1244,$1492
+./datasets/dataset-master/Lease_Agreement_23.docx,John Brown,James Smith,"8289 Birch Way, Madison, TX 29744","July 26, 2024","July 26, 2025",$2173,$2607
+./datasets/dataset-master/Lease_Agreement_24.docx,Emily Johnson,Brian Williams,"2610 Spruce Ct, Riverside, OH 10903","August 11, 2024","August 11, 2025",$1561,$1873
+./datasets/dataset-master/Lease_Agreement_25.docx,Sarah Brown,Brian Smith,"452 Maple Ave, Clinton, CA 14890","November 24, 2024","November 24, 2025",$3232,$3878
+./datasets/dataset-master/Lease_Agreement_26.docx,James Brown,Brian Garcia,"4313 Spruce Ct, Franklin, OH 54555","August 10, 2024","August 10, 2025",$2330,$2796
+./datasets/dataset-master/Lease_Agreement_27.docx,Brian Garcia,Michael Davis,"9700 Oak St, Madison, OH 83951","October 19, 2024","October 19, 2025",$1236,$1483
+./datasets/dataset-master/Lease_Agreement_28.docx,Emily Johnson,Amanda Jones,"3347 Elm St, Georgetown, CA 91258","June 03, 2025","June 03, 2026",$1799,$2158
+./datasets/dataset-master/Lease_Agreement_29.docx,Michael Martinez,Amanda Miller,"9620 Oak St, Springfield, CA 70532","November 13, 2024","November 13, 2025",$1584,$1900
+./datasets/dataset-master/Lease_Agreement_31.docx,Brian Davis,John Hernandez,"5329 Birch Way, Madison, TX 67486","December 17, 2024","December 17, 2025",$1960,$2352
+./datasets/dataset-master/Lease_Agreement_32.docx,Sarah Davis,Emily Jones,"8962 Pine Rd, Madison, NY 43887","October 20, 2024","October 20, 2025",$2117,$2540
+./datasets/dataset-master/Lease_Agreement_33.docx,James Johnson,Brian Williams,"1071 Chestnut Blvd, Riverside, GA 43887","December 10, 2024","December 10, 2025",$2777,$3332
+./datasets/dataset-master/Lease_Agreement_34.docx,David Garcia,David Jones,"7855 Maple Ave, Clinton, OH 83386","March 12, 2025","March 12, 2026",$3019,$3622
+./datasets/dataset-master/Lease_Agreement_35.docx,John Brown,David Smith,"7515 Pine Rd, Fairview, CA 17415","June 09, 2025","June 09, 2026",$1406,$1687
+./datasets/dataset-master/synthetic_lease_1.docx,"Stewart, Vaughan and Sparks",Cynthia Anderson,"066 Moody Mission Apt. 911, North Davidland, SC 84735",02 June 2025,02 June 2026,$2492,$4984
+./datasets/dataset-master/synthetic_lease_2.docx,Xiamen Torch Hi-tech Industrial Development Zone Finance Services Center,"eHealth China (Xiamen) Technology Co., Ltd.","8F-B, Chuangxin Building, Xiamen Software Park, Xiamen 361005",commence on 01 January 2023,31 December 2025,$37526,$75052
+./datasets/dataset-master/synthetic_lease_3.docx,"Dongguan United Real Estate Co., Ltd.","PepsiCo (China) Investment Co., Ltd.","6th Floor, Block B, Vanke Times Center, Dongguan City, Guangdong Province",commence on 01 February 2024,31 January 2025,$11245,$22490
+./datasets/dataset-master/synthetic_lease_4.docx,"Shanghai Pudong Software Park Co., Ltd.","Tianwei Yingjia Education Technology (Shanghai) Co., Ltd.","Building 3, No. 1500, Zuchongzhi Road, Zhangjiang Hi-Tech Park, Pudong New Area, Shanghai, China",commence on 01 December 2022,30 November 2025,$21984,$43968
+./datasets/dataset-master/synthetic_lease_5.docx,Landlord_5,Tenant_5,"420 Elm Street, Apt 18, Springfield, ZZ 24120","commence on August 01, 2023","July 31, 2024",$1979,$2338
+./datasets/dataset-master/synthetic_lease_6.docx,Landlord_6,Tenant_6,"228 Elm Street, Apt 14, Springfield, ZZ 65444","commence on April 01, 2023","March 31, 2024",$2686,$2742
+./datasets/dataset-master/synthetic_lease_7.docx,Landlord_7,Tenant_7,"919 Elm Street, Apt 13, Springfield, ZZ 70821","commence on February 01, 2023","February 01, 2024",$1464,$1840
+./datasets/dataset-master/synthetic_lease_8.docx,Landlord_8,Tenant_8,"868 Elm Street, Apt 20, Springfield, ZZ 47463","commence on October 01, 2023","September 30, 2024",$2858,$1948
+./datasets/dataset-master/synthetic_lease_9.docx,UNITED STATES STEEL CORPORATION,"TAURUS EXPLORATION, INC.","124,000 acres in Jefferson and Tuscaloosa Counties, Alabama",commence on 01 February 2023,01 February 2024,$2200,$4400
+./datasets/dataset-master/synthetic_lease_10.docx,Lincoln Property Management,Thermo Inc.,"545 Walnut Street, Dallas, TX 75201",commence on 15 September 2022,15 September 2023,$2600,$5200
+./datasets/dataset-master/synthetic_lease_11.docx,Emerald Estates LLC,Green Tech Labs,"78 Renewable Way, Portland, OR 97201",commence on 05 July 2021,05 July 2022,$1800,$3600
+./datasets/dataset-master/synthetic_lease_12.docx,UrbanRise Developers,Zephyr Data Corp.,"902 Midtown Ave, Atlanta, GA 30309",commence on 10 January 2024,09 January 2025,$3400,$6800
+./datasets/dataset-master/synthetic_lease_13.docx,RealCapital Investments,BioNova Systems,"22 Innovation Blvd, San Jose, CA 95134",commence on 20 April 2023,19 April 2024,$2950,$5900
+./datasets/dataset-master/synthetic_lease_14.docx,Global Realty LLC,Alex Martin,"101 Cedar Lane, Albany, NY 12203",commence on 2023-01-01,2023-12-31,$2883,$1685
+./datasets/dataset-master/synthetic_lease_15.docx,Pinecrest Properties,Dana Lee,"55 Oceanview Drive, Miami, FL 33139",commence on 2023-01-01,2023-12-31,$1656,$1211
+./datasets/dataset-master/synthetic_lease_16.docx,Oakwood Estates,Chris Patel,"773 Willow Creek Rd, Dallas, TX 75248",commence on 2023-01-01,2023-12-31,$2629,$1642
+./datasets/dataset-master/synthetic_lease_17.docx,Blue Horizon Holdings,Morgan Zhang,"4200 Sunset Blvd, Los Angeles, CA 90026",commence on 2023-01-01,2023-12-31,$2444,$1614
+./datasets/dataset-master/synthetic_lease_18.docx,Skyline Rentals,Jamie Rivera,"219 Pine Hill Ave, Seattle, WA 98101",commence on 2023-01-01,2023-12-31,$2570,$1818
+./datasets/dataset-master/synthetic_lease_19.docx,Lessor Name 19,Lessee Name 19,"119 Main Street, City 19, ST 19000","commence on November 25, 2023","November 24, 2024",2268.00.,73.00 a
+./datasets/dataset-master/synthetic_lease_20.docx,Lessor Name 20,Lessee Name 20,"120 Main Street, City 20, ST 20000","commence on October 03, 2023","October 02, 2024",1202.00.,369.00 a
+./datasets/dataset-master/synthetic_lease_21.docx,Lessor Name 21,Lessee Name 21,"121 Main Street, City 21, ST 21000","commence on August 18, 2023","August 17, 2024",1436.00.,642.00 a
+./datasets/dataset-master/synthetic_lease_22.docx,Lessor Name 22,Lessee Name 22,"122 Main Street, City 22, ST 22000","commence on February 22, 2023","February 22, 2024",1842.00.,76.00 a
+./datasets/dataset-master/synthetic_lease_23.docx,Lessor Name 23,Lessee Name 23,"123 Main Street, City 23, ST 23000","commence on June 02, 2023","June 01, 2024",1479.00.,184.00 a
+./datasets/dataset-master/synthetic_lease_24.docx,Lessor Name 24,Lessee Name 24,"124 Main Street, City 24, ST 24000","commence on May 28, 2023","May 27, 2024",2263.00.,431.00 a
+./datasets/dataset-master/synthetic_lease_26.docx,"r Name 26 (""La","e Name 26 (""Te","ain Street, Apartment 26, Springfield, XY 10026
+TERM","nce on July 04, 2025 and shall",026. This Agreemen,due o,$630
+./datasets/dataset-master/synthetic_lease_27.docx,SSOR: Lessor N,SSEE: Lessee N,"d at: 127 Main Street, Apartment 2",erm of this lease shall ,", 2025 and s", pay the,$635
+./datasets/dataset-master/synthetic_lease_28.docx,Lessor Name 28,Lessee Name 28,"128 Main Street, Apartment 28, Springfield, XY 10028","commence on November 26, 2025","November 26, 2026",$1280,$640
+./datasets/dataset-master/synthetic_lease_29.docx,Lessor Name 29,Lessee Name 29,"129 Main Street, Apartment 29, Springfield, XY 10029","commence on January 24, 2025","January 24, 2026",$1290,$645
+./datasets/dataset-master/synthetic_lease_30.docx,Lessor Name 30,Lessee Name 30,"130 Main Street, Apartment 30, Springfield, XY 10030","commence on April 28, 2025","April 28, 2026",$1300,$650
+./datasets/dataset-master/synthetic_lease_31.docx,Lessor_31,Lessee_31,"131 Main Street, Apt 31, Cityville, ST 10031","commence on April 14, 2024","April 14, 2025",$1775,$2430
+./datasets/dataset-master/synthetic_lease_35.docx,Lessor_35,Lessee_35,"135 Main Street, Apt 35, Cityville, ST 10035","commence on June 19, 2024","June 19, 2025",$1875,$2550
+./datasets/dataset-master/vsd1.docx,"Beijing Shunfeng Runlin Technology and Trade Co., Ltd.","Beijing Ninetowns Sky Eco-Agriculture Co., Ltd.","south of Lianying Village, Quanying Town, Shunyi District, Beijing","March 1, 2010","February 28, 2013","RMB 550,000","RMB 200,00"
+./datasets/dataset-master/vsd2.docx,"WNI/Tennessee, L.P","AF Services, LLC, a Delaware limited liability company","Southpoint Commercial Park, Memphis, TN","September 1, 2009","February 28, 2013","$42,400.00",$0.00
+./datasets/dataset-master/vsd3.docx,"Shenzhen Shunping Industrial Co., Ltd","Shenzhen Skyrise Technology Co., Ltd","3 Maque Ling Industrial District Road, Nanshan District, Shenzhen, China","June 15, 2008","June 14, 2011","RMB 66,150.00",This deposi
+./datasets/dataset-master/vsd4.docx,"LTC Properties, Inc","Assisted Living Concepts, Inc.",,,,,"$204,400.00"
+./datasets/dataset-master/vsd6.docx,SOUTHERN TAIWAN SCIENCE PARK ADMINISTRATION,TAIWAN SEMICONDUCTOR MANUFACTURING COMPANY LIMITED,Southern Taiwan Science Park,"August 1, 2012","July 31, 2013","NT$2,033,114",
+./datasets/dataset-master/vsd7.docx,"MPM Heartland House, LLC","Aratana Therapeutics, Inc","1901 Olathe Boulevard, Kansas City, Wyandotte County, Kansas","September 1, 2011","August 30, 2012","$24,000.00","$4,000.00"
+./datasets/dataset-master/vsd8.docx,Michael Thompson,Emily Rodriguez,"123 Maple Street, Apartment 4B, Oakville, CA 90210","June 1, 2025 ","May 31, 2026","$2,500","$5,000"
+./datasets/dataset-master/vsd10.docx,Mrs. Anjali Kapoor,Mr. Aditya Mehra,"Unit #6C, Parkview Residency, 104 East 23rd Street, New York, NY 10010","April 1, 2025","March 31, 2026","$3,200","$3,20"
