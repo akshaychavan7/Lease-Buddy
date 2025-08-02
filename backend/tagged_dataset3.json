@@ -26,8 +26,8 @@
             "end": 826
         },
         "SECURITY_DEPOSIT_AMOUNT": {
-            "start": 815,
-            "end": 826
+            "start": 1013,
+            "end": 1023
         }
     }
 },
@@ -92,8 +92,8 @@
             "end": 655
         },
         "SECURITY_DEPOSIT_AMOUNT": {
-            "start": 642,
-            "end": 655
+            "start": 1003,
+            "end": 1014
         }
     }
 },
@@ -258,8 +258,8 @@
             "end": 402
         },
         "SECURITY_DEPOSIT_AMOUNT": {
-            "start": 396,
-            "end": 402
+            "start": 512,
+            "end": 517
         }
     }
 }
