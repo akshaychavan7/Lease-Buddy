@@ -1,12 +1,13 @@
 "use client"
 
-import { Box, Typography, Paper, Button, Stack, Card, Avatar } from "@mui/material"
-import { Person, LocationOn, Refresh, AttachMoney, Security, CalendarMonth, CalendarToday } from "@mui/icons-material"
+import { Box, Typography, Paper, Button, Stack, Card, Avatar, Chip } from "@mui/material"
+import { Person, LocationOn, Refresh, AttachMoney, Security, CalendarMonth, CalendarToday, Psychology } from "@mui/icons-material"
 
 interface EntityDisplayProps {
   entities: Record<string, string[]>
   filename: string
   onReset: () => void
+  model?: string
 }
 
 // Enhanced entity configuration with more specific icons and descriptions
@@ -55,7 +56,16 @@ const entityConfig = {
   }
 }
 
-export default function EntityDisplay({ entities, filename, onReset }: EntityDisplayProps) {
+const getModelDisplayName = (modelName: string): string => {
+  const displayNames: Record<string, string> = {
+    "spacy": "Fine-tuned spaCy NER Model",
+    "bert": "BERT-based NER Model",
+    "spacy_bert": "spaCy + BERT NER Model"
+  }
+  return displayNames[modelName] || modelName
+}
+
+export default function EntityDisplay({ entities, filename, onReset, model }: EntityDisplayProps) {
   return (
     <Paper
       elevation={2}
@@ -74,6 +84,23 @@ export default function EntityDisplay({ entities, filename, onReset }: EntityDis
           <Typography variant="body2" color="text.secondary">
             Key information extracted from {filename}
           </Typography>
+          {model && (
+            <Box sx={{ mt: 1 }}>
+              <Chip
+                icon={<Psychology />}
+                label={`AI Model: ${getModelDisplayName(model)}`}
+                size="small"
+                color="info"
+                variant="outlined"
+                sx={{ 
+                  borderRadius: 1,
+                  "& .MuiChip-icon": {
+                    fontSize: 16
+                  }
+                }}
+              />
+            </Box>
+          )}
         </Box>
         <Button
           startIcon={<Refresh />}

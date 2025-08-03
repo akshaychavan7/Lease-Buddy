@@ -122,6 +122,7 @@ interface UploadResponse {
   filename: string
   entities: Record<string, string[]>
   fullContent: string
+  model: string
 }
 
 export default function Home() {
@@ -297,7 +298,7 @@ export default function Home() {
               </Box>
 
               {/* Main Content with Top Spacing */}
-              <Box sx={{ pt: 12, pb: 6 }}>
+              <Box sx={{ pt: 12, pb: 0 }}>
                 {/* Hero Section - Only show on upload state */}
                 {processingState === "upload" && (
                   <Box sx={{ textAlign: "center", mb: 8 }}>
@@ -327,9 +328,9 @@ export default function Home() {
                       maxWidth: 600,
                       mx: "auto",
                       lineHeight: 1.5,
-                      mb: 4,
+                      mb: 0,
                     }}>
-                      Extract key information from lease documents with AI-powered precision and chat with intelligent insights
+                      Extract key entities from lease documents and chat with intelligent insights
                     </Typography>
                   </Box>
                 )}
@@ -391,7 +392,7 @@ export default function Home() {
                 <Fade in={true} timeout={800}>
                   <Box sx={{ maxWidth: 1400, mx: "auto", px: 3, py: 4 }}>
                     <Box id="lease-details" sx={{ mb: 6 }}>
-                      <EntityDisplay entities={entities} filename={uploadedFile.filename} onReset={handleReset} />
+                      <EntityDisplay entities={entities} filename={uploadedFile.filename} onReset={handleReset} model={uploadedFile.model} />
                     </Box>
                     
                     

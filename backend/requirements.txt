@@ -3,6 +3,9 @@ uvicorn[standard]
 spacy
 pydantic
 python-multipart
-openai
+openai==1.98.0
 python-dotenv
-requests 
+requests
+transformers
+torch
+spacy-transformers 

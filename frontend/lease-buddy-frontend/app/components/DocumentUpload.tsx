@@ -1,9 +1,15 @@
 "use client"
 
-import { useCallback, useState } from "react"
-import { Box, Typography, Paper, Button, Chip, Fade, Zoom } from "@mui/material"
+import { useCallback, useState, useEffect } from "react"
+import { Box, Typography, Paper, Button, Chip, Fade, Zoom, FormControl, InputLabel, Select, MenuItem, Alert } from "@mui/material"
 import { useDropzone } from "react-dropzone"
-import { CloudUpload, Description, CheckCircle, Error } from "@mui/icons-material"
+import { CloudUpload, Description, CheckCircle, Error, Psychology } from "@mui/icons-material"
+
+interface Model {
+  name: string
+  display_name: string
+  type: string
+}
 
 interface DocumentUploadProps {
   onUploadStart: () => void
@@ -19,6 +25,36 @@ export default function DocumentUpload({
   onProcessingStep,
 }: DocumentUploadProps) {
   const [dragState, setDragState] = useState<'idle' | 'drag' | 'error'>('idle')
+  const [selectedModel, setSelectedModel] = useState<string>("spacy")
+  const [availableModels, setAvailableModels] = useState<Model[]>([])
+  const [modelsLoading, setModelsLoading] = useState(true)
+  const [modelsError, setModelsError] = useState<string>("")
+
+  // Fetch available models on component mount
+  useEffect(() => {
+    const fetchModels = async () => {
+      try {
+        setModelsLoading(true)
+        const response = await fetch("/api/models")
+        if (!response.ok) {
+          throw new Error("Failed to fetch models")
+        }
+        const data = await response.json()
+        setAvailableModels(data.models || [])
+        if (data.models && data.models.length > 0) {
+          setSelectedModel(data.models[0].name)
+        }
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "Failed to load available models"
+        setModelsError(errorMessage)
+        console.error("Error fetching models:", error)
+      } finally {
+        setModelsLoading(false)
+      }
+    }
+
+    fetchModels()
+  }, [])
 
   const onDrop = useCallback(
     async (acceptedFiles: File[]) => {
@@ -27,6 +63,7 @@ export default function DocumentUpload({
       const file = acceptedFiles[0]
       const formData = new FormData()
       formData.append("file", file)
+      formData.append("model", selectedModel)
 
       try {
         onUploadStart()
@@ -44,10 +81,11 @@ export default function DocumentUpload({
         const data = await response.json()
         onUploadSuccess(data)
       } catch (error) {
-        onUploadError("Failed to upload and process the document. Please try again.")
+        const errorMessage = error instanceof Error ? error.message : "Failed to upload and process the document. Please try again."
+        onUploadError(errorMessage)
       }
     },
-    [onUploadStart, onUploadSuccess, onUploadError, onProcessingStep]
+    [onUploadStart, onUploadSuccess, onUploadError, onProcessingStep, selectedModel]
   )
 
   const onDropRejected = useCallback(() => {
@@ -87,7 +125,7 @@ export default function DocumentUpload({
         <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography variant="h4" sx={{ 
             fontWeight: 700, 
-            mb: 2,
+            mb: 4,
             background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
@@ -95,31 +133,61 @@ export default function DocumentUpload({
           }}>
             Upload Your Lease Document
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-            Extract key information from your lease agreements automatically
-          </Typography>
+
+          
+          {/* Model Selection */}
+          <Box sx={{ mb: 3 }}>
+            {modelsError && (
+              <Alert severity="warning" sx={{ mb: 2 }}>
+                {modelsError}
+              </Alert>
+            )}
+            
+            <FormControl fullWidth sx={{ maxWidth: 400 }}>
+              <InputLabel id="model-select-label">Choose NER Model</InputLabel>
+              <Select
+                labelId="model-select-label"
+                id="model-select"
+                value={selectedModel}
+                label="Choose AI Model"
+                onChange={(e) => setSelectedModel(e.target.value)}
+                disabled={modelsLoading}
+                startAdornment={
+                  <Psychology sx={{ mr: 1, color: "text.secondary" }} />
+                }
+              >
+                {availableModels.map((model) => (
+                  <MenuItem key={model.name} value={model.name}>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      {model.display_name}
+                    </Box>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Box>
           
           {/* Feature Chips */}
           <Box sx={{ display: "flex", gap: 1, justifyContent: "center", flexWrap: "wrap" }}>
             <Chip 
               icon={<Description />} 
-              label="PDF Support" 
+              label="Chat Support" 
               size="small" 
               color="primary" 
               variant="outlined"
             />
             <Chip 
-              icon={<CheckCircle />} 
-              label="AI Extraction" 
+              icon={<Psychology />} 
+              label="Multiple AI Models" 
               size="small" 
-              color="success" 
+              color="info" 
               variant="outlined"
             />
             <Chip 
               icon={<CheckCircle />} 
               label="Instant Results" 
               size="small" 
-              color="info" 
+              color="success" 
               variant="outlined"
             />
           </Box>
@@ -228,7 +296,7 @@ export default function DocumentUpload({
               mt: 3,
               opacity: 0.7
             }}>
-              Supported formats: PDF, DOC, DOCX, TXT
+              Supported formats: TXT
             </Typography>
           </Box>
         </Fade>
@@ -236,7 +304,7 @@ export default function DocumentUpload({
         {/* Info Section */}
         <Box sx={{ mt: 4, textAlign: "center" }}>
           <Typography variant="body2" color="text.secondary" sx={{ opacity: 0.8 }}>
-            Your document will be processed securely and key lease information will be extracted automatically
+            Team: Akshay Chavan, Vaishali Murugavel, Ishan Aggarwal
           </Typography>
         </Box>
 

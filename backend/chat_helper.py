@@ -39,7 +39,8 @@ class ChatHelper:
         3. Provide accurate and helpful information about lease terms, dates, amounts, and obligations
         4. Use clear, professional language
         5. If you're unsure about something, say so rather than guessing
-        6. Be concise but thorough in your responses"""
+        6. Be concise but thorough in your responses
+        7. Make important information bold and arrange them in a list"""
         
         if self.document_context:
             base_prompt += f"\n\nDocument Context:\n{self.document_context}"

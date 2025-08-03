@@ -10,6 +10,7 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.formData()
     const file: File | null = data.get("file") as unknown as File
+    const model: string = (data.get("model") as string) || "spacy" // Default to spaCy model
 
     if (!file) {
       return NextResponse.json({ success: false, message: "No file uploaded" })
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
       documentContent = buffer.toString("utf-8")
     }
 
-    // Call FastAPI backend for NER extraction
+    // Call FastAPI backend for NER extraction with model parameter
     const nerResponse = await fetch(`${BACKEND_URL}/extract-entities`, {
       method: "POST",
       headers: {
@@ -51,6 +52,7 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify({
         text: documentContent,
+        model: model,
       }),
     })
 
@@ -69,6 +71,7 @@ export async function POST(request: NextRequest) {
       entities,
       content: documentContent.substring(0, 1000) + "...", // Preview
       fullContent: documentContent, // Full content for chat
+      model: model, // Return the model used
     })
   } catch (error) {
     console.error("Upload error:", error)

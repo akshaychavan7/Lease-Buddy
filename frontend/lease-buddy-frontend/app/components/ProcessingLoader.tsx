@@ -50,7 +50,7 @@ export default function ProcessingLoader({ currentStep, onReset }: ProcessingLoa
               </Typography>
               
               <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-                Our AI is analyzing your lease document and extracting key information
+                Our model is analyzing your lease document and extracting key information
               </Typography>
 
               {/* Status Chip */}
