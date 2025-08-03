@@ -1,0 +1,29 @@
+FILE_PATH,LESSOR_NAME,LESSEE_NAME,PROPERTY_ADDRESS,LEASE_START_DATE,LEASE_END_DATE,RENT_AMOUNT,SECURITY_DEPOSIT_AMOUNT
+./datasets/dataset-master/testing/Lease_Agreement_Test15.docx,MEPC MILTON PARK NO.,THERAPEUTICS PLC,,,"February 28, 2022",,"£50,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test19.docx,YOUHAN,YOUXINPAI (BEIJING),,,"May 19, 2024","$72,000","$70,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test6.docx,REDBURY LIMITED ,LG (UK) LIMITED ,,,rd February 2018.,"100,170.","100,170 "
+./datasets/dataset-master/testing/Lease_Agreement_Test7.docx,"TECAR PROPERTIES, LLC ",,"1480 Industrial Parkway, Castroville, CA
+",,"ecember 31, 2015.","334,872.00.",
+./datasets/dataset-master/testing/Lease_Agreement_Test18.docx,UCARSHOW HK LIMITED,,,"commence on April 1, 2021","March 31, 2026","$60,000","$70,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test14.docx,UXIN LIMITED,GLORYFIN INTERNATIONAL GROUP HOLDING COMPANY LIMITED,,,"December 31, 2023","$50,000","$100,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test13.docx,MEPC MILTON PARK NO.,OXFORD IMMUNOTEC LIMITED,"Units 115 B and D, Milton Park, Abingdon, Oxfordshire",commence on 2008,11 June 2019,,£20000.00
+./datasets/dataset-master/testing/Lease_Agreement_Test12.docx,George Feldenkreis,"Supreme International, Inc.","7495 N.W. 48th Street, Miami, Florida",,"June 30, 2014",,
+./datasets/dataset-master/testing/Lease_Agreement_Test1.docx,"ianjin Milk Goat Dairy Co., Ltd. ","ianjin Yayi Industrial Co., Ltd. ",,"eptember 1, 2008 ","ugust 30, 2029.",,
+./datasets/dataset-master/testing/Lease_Agreement_Test2.docx,ianjin Changhe Heli Investment Company ,atai Weilai Technology Development Beijing Branch ,"98 S. Sanhuan Rd., Chaoyang District, Beijing 100122
+",,,,
+./datasets/dataset-master/testing/Lease_Agreement_Test11.docx,,"ICROSOFT CHINA CO., LTD.","st-3rd Floor, Building 2, Zhangjiang Hi-Tech Park, Shanghai
+","ommence on April 1, 2004 ","arch 31, 2009.","2,500,000.00.","500,000.00 "
+./datasets/dataset-master/testing/Lease_Agreement_Test10.docx,,"INKO SOLAR CO., LTD.","99 North Changjiang Road, Xinwu District, Wuxi City
+",,"ecember 31, 2015.",,"200,000.00 "
+./datasets/dataset-master/testing/Lease_Agreement_Test3.docx,"ibiscus Office Park, L.L.C. ",he Goldfield Corp. ,"684 W. Hibiscus Blvd., Melbourne, FL 32901
+",,"une 7, 2011.","102,411.",
+./datasets/dataset-master/testing/Lease_Agreement_Test8.docx,,HINA TIAN YUAN ,,,"une 14, 2021.","300,000.00.",
+./datasets/dataset-master/testing/Lease_Agreement_Test17.docx,BOYU FINANCING LEASE,KAIFENG FINANCING LEASE,,,"July 14, 2027","$85,000","$100,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test4.docx,ANAL & RIVER TRUST ,TI BILLING SOLUTIONS LIMITED ,"06 Daisyfield Business Centre, Appleby Street, Blackburn, Lancashire
+",ommence on 1 January 2012 ,1 December 2014.,,
+./datasets/dataset-master/testing/Lease_Agreement_Test21.docx,SICHUAN YOUXINPAI,YOUXINPAI (BEIJING),,,"September 30, 2021","$58,000","$60,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test20.docx,,HONG KONG LIMITED,,,"July 31, 2023","$95,000","$105,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test5.docx,Ashley Martinez,Sarah Williams,"5316 Pine Rd, Franklin, CA 70457",,"May 26, 2026",$1038,$1245
+./datasets/dataset-master/testing/Lease_Agreement_Test16.docx,YOUXIN LIMITED,,,,"June 9, 2025",$2500,$2000
+./datasets/dataset-master/testing/Lease_Agreement_Test9.docx,"HENZHEN NEW TAOYUAN INDUSTRIAL CO., LTD.","HENZHEN GUANGRONG ELECTRONIC CO., LTD.","uilding B, No. 3, Gongye East Road, Nanshan District, Shenzhen
+",,"ebruary 28, 2020.","600,000.00.","100,000.00 "
