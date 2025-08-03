@@ -1,5 +1,237 @@
 [
     {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test8.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 160
+            },
+            "LESSEE_NAME": {
+                "start": 184,
+                "end": 236
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 338,
+                "end": 390
+            },
+            "LEASE_START_DATE": {
+                "start": 450,
+                "end": 463
+            },
+            "LEASE_END_DATE": {
+                "start": 487,
+                "end": 500
+            },
+            "RENT_AMOUNT": {
+                "start": 622,
+                "end": 633
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 870,
+                "end": 880
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test9.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 163
+            },
+            "LESSEE_NAME": {
+                "start": 187,
+                "end": 225
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 327,
+                "end": 390
+            },
+            "LEASE_START_DATE": {
+                "start": 450,
+                "end": 463
+            },
+            "LEASE_END_DATE": {
+                "start": 487,
+                "end": 504
+            },
+            "RENT_AMOUNT": {
+                "start": 626,
+                "end": 637
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 874,
+                "end": 885
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test10.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 125,
+                "end": 160
+            },
+            "LESSEE_NAME": {
+                "start": 184,
+                "end": 204
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 306,
+                "end": 362
+            },
+            "LEASE_START_DATE": {
+                "start": 422,
+                "end": 437
+            },
+            "LEASE_END_DATE": {
+                "start": 461,
+                "end": 478
+            },
+            "RENT_AMOUNT": {
+                "start": 600,
+                "end": 613
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 850,
+                "end": 861
+            }
+        }
+    },
+        {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test11.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 171
+            },
+            "LESSEE_NAME": {
+                "start": 195,
+                "end": 219
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 321,
+                "end": 381
+            },
+            "LEASE_START_DATE": {
+                "start": 441,
+                "end": 454
+            },
+            "LEASE_END_DATE": {
+                "start": 478,
+                "end": 492
+            },
+            "RENT_AMOUNT": {
+                "start": 614,
+                "end": 627
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 864,
+                "end": 875
+            }
+        }
+    },
+    {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test12.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 120,
+                "end": 138
+            },
+            "LESSEE_NAME": {
+                "start": 160,
+                "end": 186
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 354,
+                "end": 391
+            },
+            "LEASE_START_DATE": {
+                "start": 450,
+                "end": 462
+            },
+            "LEASE_END_DATE": {
+                "start": 486,
+                "end": 499
+            },
+            "RENT_AMOUNT": {
+                "start": 620,
+                "end": 630
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 866,
+                "end": 869
+            }
+        }
+    },
+        {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test13.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 112,
+                "end": 178
+            },
+            "LESSEE_NAME": {
+                "start": 199,
+                "end": 223
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 323,
+                "end": 386
+            },
+            "LEASE_START_DATE": {
+                "start": 445,
+                "end": 449
+            },
+            "LEASE_END_DATE": {
+                "start": 473,
+                "end": 485
+            },
+            "RENT_AMOUNT": {
+                "start": 606,
+                "end": 616
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 879,
+                "end": 888
+            }
+        }
+    },
+
+    {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test14.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 123,
+                "end": 135
+            },
+            "LESSEE_NAME": {
+                "start": 157,
+                "end": 209
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 309,
+                "end": 316
+            },
+            "LEASE_START_DATE": {
+                "start": 375,
+                "end": 390
+            },
+            "LEASE_END_DATE": {
+                "start": 414,
+                "end": 431
+            },
+            "RENT_AMOUNT": {
+                "start": 552,
+                "end": 559
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 795,
+                "end": 803
+            }
+        }
+    },
+    {
         "file_path": "./datasets/dataset-master/testing/Lease_Agreement_Test15.docx",
         "entities": {
             "LESSOR_NAME": {
