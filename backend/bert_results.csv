@@ -1,0 +1,22 @@
+,FILE_PATH,LEASE_START_DATE,score,LESSOR_NAME,LESSEE_NAME,PROPERTY_ADDRESS,LEASE_END_DATE,SECURITY_DEPOSIT_AMOUNT
+0,./datasets/dataset-master/testing/Lease_Agreement_Test1.docx,"september 1,",0.6484776139259338,"tianjin milk goat dairy co., ltd.","tianjin yayi industrial co., ltd.",.,"august 30,",$ not specified
+1,./datasets/dataset-master/testing/Lease_Agreement_Test10.docx,",",0.733792781829834,": wuxi guangzheng new energy co., ltd.",": jinko solar co., ltd.",.,.,"$ 200, 000. 00"
+2,./datasets/dataset-master/testing/Lease_Agreement_Test11.docx,"april 1,",0.7490448951721191,landlord,": microsoft china co., ltd.",.,"march 31,","$ 500, 000. 00"
+3,./datasets/dataset-master/testing/Lease_Agreement_Test12.docx,"july 1,",0.7243377566337585,george feldenkreis,": supreme international, inc., a delaware corporation, its successors","7495 n. w. 48th street, miami, florida 1.","june 30,",n / a
+4,./datasets/dataset-master/testing/Lease_Agreement_Test13.docx,,0.7681272625923157,: mepc milton park no. 1 limited and mepc milton park no. 2 limited,oxford immunotec limited,"units 115 b and d, milton park, abingdon, oxfordshire, ox14 4sa",11 june,£20000. 00
+5,./datasets/dataset-master/testing/Lease_Agreement_Test14.docx,",",0.4995591938495636,: uxin limited,gloryfin international group holding company limited,beijing,"december 31, 2023.",a
+6,./datasets/dataset-master/testing/Lease_Agreement_Test15.docx,"1,",0.498695433139801,mepc milton park no. 2 limited,adaptimmune therapeutics plc,"oxford, uk",.,_ amount
+7,./datasets/dataset-master/testing/Lease_Agreement_Test16.docx,", 2020",0.6593525409698486,: youxin limited,perfect harmony group limited,shanghai,"june 9, 2025.",$ [
+8,./datasets/dataset-master/testing/Lease_Agreement_Test17.docx,", 2022",0.6307302713394165,boyu financing lease,kaifeng financing lease,hangzhou,.,$ [
+9,./datasets/dataset-master/testing/Lease_Agreement_Test18.docx,"august 3,",0.5845848321914673,ucarshow hk limited,ucarbuy holding limited,hong kong,.,amount
+10,./datasets/dataset-master/testing/Lease_Agreement_Test19.docx,"20, 2019",0.5649734139442444,: youhan ( shanghai ),: youxinpai ( beijing ),beijing,"may 19, 2024.",deposit _ amount
+11,./datasets/dataset-master/testing/Lease_Agreement_Test2.docx,,0.7647519111633301,landlord,yatai weilai technology development beijing branch,.,,$ not specified
+12,./datasets/dataset-master/testing/Lease_Agreement_Test20.docx,2018,0.5436908602714539,: youxin internet ( beijing ),youxin hong kong limited,##ijing,"july 31, 2023.",deposit _ amount ]
+13,./datasets/dataset-master/testing/Lease_Agreement_Test21.docx,"august 03,",0.5770556926727295,sichuan youxinpai,: youxinpai ( beijing ),##uan,"september 30, 2021.",_ amount
+14,./datasets/dataset-master/testing/Lease_Agreement_Test3.docx,",",0.5077491402626038,": hibiscus office park, l. l. c.",the goldfield corp.,.,"june 7, 2011.",a
+15,./datasets/dataset-master/testing/Lease_Agreement_Test4.docx,,0.7874252796173096,: canal & river trust,cti billing solutions limited,"office suites 502, 504 and 506 daisyfield business centre, appleby street, blackburn, lancashire 1.",31 december 2014.,$ not specified
+16,./datasets/dataset-master/testing/Lease_Agreement_Test5.docx,", 2025",0.7103158235549927,ashley martinez,sarah williams,"5316 pine rd, franklin, ca 70457 1.","may 26, 2026.",a
+17,./datasets/dataset-master/testing/Lease_Agreement_Test6.docx,,0.8481122851371765,: bredbury limited,: wlg ( uk ) limited,"unit a, site 1, horsfield way, bredbury, stockport 1.",.,"$ 100, 170"
+18,./datasets/dataset-master/testing/Lease_Agreement_Test7.docx,",",0.8567121028900146,"stecar properties, llc","diedrich coffee, inc.","11480 industrial parkway, castroville, ca 1.","december 31, 2015.",$ not specified
+19,./datasets/dataset-master/testing/Lease_Agreement_Test8.docx,"june 15,",0.7626795172691345,": zhejiang fengyuan enterprise co., ltd.",": china tian yuan specialty crop technologies co., ltd.",.,"june 14,","$ 50, 000. 00"
+20,./datasets/dataset-master/testing/Lease_Agreement_Test9.docx,"march 1,",0.7753543257713318,": shenzhen new taoyuan industrial co., ltd.","shenzhen guangrong electronic co., ltd.",.,"february 28,","$ 100, 000. 00"
