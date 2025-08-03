@@ -1,0 +1,35 @@
+[
+    {
+        "file_path": "./datasets/dataset-master/testing/Lease_Agreement_15.docx",
+        "entities": {
+            "LESSOR_NAME": {
+                "start": 120,
+                "end": 135
+            },
+            "LESSEE_NAME": {
+                "start": 157,
+                "end": 172
+            },
+            "PROPERTY_ADDRESS": {
+                "start": 271,
+                "end": 303
+            },
+            "LEASE_START_DATE": {
+                "start": 362,
+                "end": 374
+            },
+            "LEASE_END_DATE": {
+                "start": 398,
+                "end": 410
+            },
+            "RENT_AMOUNT": {
+                "start": 530,
+                "end": 536
+            },
+            "SECURITY_DEPOSIT_AMOUNT": {
+                "start": 772,
+                "end": 777
+            }
+        }
+    }
+]
