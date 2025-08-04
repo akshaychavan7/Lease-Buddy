@@ -1,44 +1,44 @@
 {
     "LESSOR_NAME": {
-        "total": 14,
-        "true_positives": 8,
-        "precision": 0.571,
-        "recall": 0.571,
-        "f1_score": 0.571
+        "total": 21,
+        "true_positives": 16,
+        "precision": 0.762,
+        "recall": 0.762,
+        "f1_score": 0.762
     },
     "LESSEE_NAME": {
-        "total": 14,
-        "true_positives": 11,
-        "precision": 0.786,
-        "recall": 0.786,
-        "f1_score": 0.786
+        "total": 21,
+        "true_positives": 16,
+        "precision": 0.762,
+        "recall": 0.762,
+        "f1_score": 0.762
     },
     "PROPERTY_ADDRESS": {
-        "total": 14,
-        "true_positives": 5,
-        "precision": 0.357,
-        "recall": 0.357,
-        "f1_score": 0.357
+        "total": 21,
+        "true_positives": 10,
+        "precision": 0.476,
+        "recall": 0.476,
+        "f1_score": 0.476
     },
     "LEASE_START_DATE": {
-        "total": 14,
-        "true_positives": 0,
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1_score": 0
+        "total": 21,
+        "true_positives": 2,
+        "precision": 0.095,
+        "recall": 0.095,
+        "f1_score": 0.095
     },
     "LEASE_END_DATE": {
-        "total": 14,
-        "true_positives": 14,
+        "total": 21,
+        "true_positives": 21,
         "precision": 1.0,
         "recall": 1.0,
         "f1_score": 1.0
     },
     "SECURITY_DEPOSIT_AMOUNT": {
-        "total": 14,
-        "true_positives": 12,
-        "precision": 0.857,
-        "recall": 0.857,
-        "f1_score": 0.857
+        "total": 21,
+        "true_positives": 15,
+        "precision": 0.714,
+        "recall": 0.714,
+        "f1_score": 0.714
     }
 }

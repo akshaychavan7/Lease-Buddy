@@ -98,3 +98,13 @@ body {
     font-size: 1rem;
   }
 }
+
+
+[data-nextjs-scroll-focus-boundary] {
+  display: none !important;
+}
+
+/* Or target the specific dev indicator */
+.__next-dev-overlay-turbo-indicator {
+  display: none !important;
+}

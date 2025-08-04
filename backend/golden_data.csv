@@ -1,4 +1,17 @@
 FILE_PATH,LESSOR_NAME,LESSEE_NAME,PROPERTY_ADDRESS,LEASE_START_DATE,LEASE_END_DATE,RENT_AMOUNT,SECURITY_DEPOSIT_AMOUNT
+./datasets/dataset-master/testing/Lease_Agreement_Test1.docx,"ianjin Milk Goat Dairy Co., Ltd. ","ianjin Yayi Industrial Co., Ltd. "," Unit, 4th floor, D1, Xinmao Technology Park, Huayuan Industrial Park
+","eptember 1, 2008 ","ugust 30, 2029.",4000.,200 
+./datasets/dataset-master/testing/Lease_Agreement_Test2.docx,ianjin Changhe Heli Investment Company ,atai Weilai Technology Development Beijing Branch ,"98 S. Sanhuan Rd., Chaoyang District, Beijing 100122
+","ommence on September 1, 2001 ","ay 1, 2024.",3000.,3000
+./datasets/dataset-master/testing/Lease_Agreement_Test3.docx,"ibiscus Office Park, L.L.C. ",he Goldfield Corp. ,"684 W. Hibiscus Blvd., Melbourne, FL 32901
+","ommence on June 7, 2004 ","une 7, 2011.","102,411.",900.
+./datasets/dataset-master/testing/Lease_Agreement_Test4.docx,ANAL & RIVER TRUST ,TI BILLING SOLUTIONS LIMITED ,"ffice Suites 502, 504 and 506 Daisyfield Business Centre, Appleby Street, Blackburn, Lancashire
+","ommence on January 1, 2013 ","ecember 31, 2014.",6000.,500 
+./datasets/dataset-master/testing/Lease_Agreement_Test5.docx,Ashley Martinez,Sarah Williams,"5316 Pine Rd, Franklin, CA 70457","commence on May 26, 2025","May 26, 2026",$1038,$1245
+./datasets/dataset-master/testing/Lease_Agreement_Test6.docx,REDBURY LIMITED ,LG (UK) LIMITED ,"nit A, Site 1, Horsfield Way, Bredbury, Stockport
+","ebruary 4, 2008,","ebruary 4, 2018.",1000.,900 
+./datasets/dataset-master/testing/Lease_Agreement_Test7.docx,"TECAR PROPERTIES, LLC ","IEDRICH COFFEE, INC. ","1480 Industrial Parkway, Castroville, CA
+","anuary 1, 2006,","ecember 31, 2015.",3000.,1000 
 ./datasets/dataset-master/testing/Lease_Agreement_Test8.docx,"ZHEJIANG FENGYUAN ENTERPRISE CO., LTD","CHINA TIAN YUAN SPECIALTY CROP TECHNOLOGIES CO., LTD","No. 2, Zhenxing Road, Wuyi County, Zhejiang Province","June 15, 2018","June 14, 2021","$300,000.00","$50,000.00"
 ./datasets/dataset-master/testing/Lease_Agreement_Test9.docx,"SHENZHEN NEW TAOYUAN INDUSTRIAL CO., LTD","SHENZHEN GUANGRONG ELECTRONIC CO., LTD","Building B, No. 3, Gongye East Road, Nanshan District, Shenzhen","March 1, 2015","February 28, 2020","$600,000.00","$100,000.00"
 ./datasets/dataset-master/testing/Lease_Agreement_Test10.docx,"WUXI GUANGZHENG NEW ENERGY CO., LTD","JINKO SOLAR CO., LTD","No. 299 North Changjiang Road, Xinwu District, Wuxi City","January 1, 2012","December 31, 2015","$1,200,000.00","$200,000.00"
@@ -6,10 +19,10 @@ FILE_PATH,LESSOR_NAME,LESSEE_NAME,PROPERTY_ADDRESS,LEASE_START_DATE,LEASE_END_DA
 ./datasets/dataset-master/testing/Lease_Agreement_Test12.docx,George Feldenkreis,"Supreme International, Inc","7495 N.W. 48th Street, Miami, Florida","July 1, 2004","June 30, 2014","$11,414.00",N/A
 ./datasets/dataset-master/testing/Lease_Agreement_Test13.docx,MEPC MILTON PARK NO. 1 LIMITED and MEPC MILTON PARK NO. 2 LIMITED ,OXFORD IMMUNOTEC LIMITED,"Units 115 B and D, Milton Park, Abingdon, Oxfordshire, OX14 4SA",2008,11 June 2019,"£10,932.17",£20000.00
 ./datasets/dataset-master/testing/Lease_Agreement_Test14.docx,UXIN LIMITED,GLORYFIN INTERNATIONAL GROUP HOLDING COMPANY LIMITED,Beijing,"January 1, 2023","December 31, 2023","$50,000","$100,000"
-./datasets/dataset-master/testing/Lease_Agreement_Test15.docx,MEPC MILTON PARK NO. 2 LIMITED,ADAPTIMMUNE THERAPEUTICS PLC,"Oxford, UK","March 1, 2017","February 28, 2022","£79,166.67",$[SECUR
-./datasets/dataset-master/testing/Lease_Agreement_Test16.docx,YOUXIN LIMITED,PERFECT HARMONY GROUP LIMITED,Shanghai,"June 10, 2020","June 9, 2025","$70,0",f $[S
-./datasets/dataset-master/testing/Lease_Agreement_Test17.docx,BOYU FINANCING LEASE,KAIFENG FINANCING LEASE,Hangzhou,"July 15, 2022","July 14, 2027","$85,000",$[SECURI
-./datasets/dataset-master/testing/Lease_Agreement_Test18.docx,UCARSHOW HK LIMITED,UCARBUY HOLDING LIMITED,Hong Kong,"April 1, 2021","March 31, 2026","$60,000",$[SECUR
-./datasets/dataset-master/testing/Lease_Agreement_Test19.docx,YOUHAN (SHANGHAI),YOUXINPAI (BEIJING),Beijing,"May 20, 2019","May 19, 2024","$72,000",$[SECUR
-./datasets/dataset-master/testing/Lease_Agreement_Test20.docx,YOUXIN INTERNET (BEIJING),YOUXIN HONG KONG LIMITED,Beijing,"August 1, 2018","July 31, 2023","$95,000",$[SECURI
-./datasets/dataset-master/testing/Lease_Agreement_Test21.docx,SICHUAN YOUXINPAI,YOUXINPAI (BEIJING),Sichuan,"October 1, 2016","September 30, 2021","$58,000",$[SECUR
+./datasets/dataset-master/testing/Lease_Agreement_Test15.docx,MEPC MILTON PARK NO. 2 LIMITED,ADAPTIMMUNE THERAPEUTICS PLC,"Oxford, UK","March 1, 2017","February 28, 2022","£79,166.67","£50,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test16.docx,YOUXIN LIMITED,PERFECT HARMONY GROUP LIMITED,Shanghai,"June 10, 2020","June 9, 2025",$2500,$2000
+./datasets/dataset-master/testing/Lease_Agreement_Test17.docx,BOYU FINANCING LEASE,KAIFENG FINANCING LEASE,Hangzhou,"July 15, 2022","July 14, 2027","$85,000","$100,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test18.docx,UCARSHOW HK LIMITED,UCARBUY HOLDING LIMITED,Hong Kong,"April 1, 2021","March 31, 2026","$60,000","$70,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test19.docx,YOUHAN (SHANGHAI),YOUXINPAI (BEIJING),Beijing,"May 20, 2019","May 19, 2024","$72,000","$70,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test20.docx,YOUXIN INTERNET (BEIJING),YOUXIN HONG KONG LIMITED,Beijing,"August 1, 2018","July 31, 2023","$95,000","$105,000"
+./datasets/dataset-master/testing/Lease_Agreement_Test21.docx,SICHUAN YOUXINPAI,YOUXINPAI (BEIJING),Sichuan,"October 1, 2016","September 30, 2021","$58,000","$60,000"
