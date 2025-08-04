@@ -24,7 +24,7 @@ Lease-Buddy combines multiple NLP models for entity recognition with both cloud-
 - **FastAPI**: RESTful API server
 - **spaCy**: Fine-tuned NER model for entity extraction
 - **BERT-based Model**: Transformer-based entity recognition
-- **BiLSTM-CRF Model**: Custom deep learning model
+- **Spacy + BERT Model**: Custom model
 - **Ollama Integration**: Local LLM server with Phi-3 Mini
 - **OpenAI Integration**: Cloud-based LLM for enhanced chat
 
@@ -39,7 +39,7 @@ Lease-Buddy combines multiple NLP models for entity recognition with both cloud-
 
 1. **spaCy Fine-tuned Model**: Transfer learning on lease-specific data
 2. **BERT-based Model**: Transformer architecture with token classification
-3. **BiLSTM-CRF Model**: Custom PyTorch implementation with sequential modeling
+3. **spaCy + BERT Model**: Custom model
 
 ## Setup
 
@@ -136,5 +136,5 @@ Lease-Buddy/
 
 - **Backend**: Python, FastAPI, spaCy, PyTorch, Ollama
 - **Frontend**: Next.js, React, TypeScript, Tailwind CSS
-- **ML/AI**: BERT, BiLSTM-CRF, spaCy, OpenAI API
+- **ML/AI**: BERT(LegalBERT), spaCy, OpenAI API
 - **Infrastructure**: Local LLM (Ollama), Cloud LLM (OpenAI)
