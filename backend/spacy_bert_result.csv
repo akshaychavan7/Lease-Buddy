@@ -1,0 +1,63 @@
+,FILE_PATH,LEASE_START_DATE,LESSOR_NAME,LESSEE_NAME,LEASE_END_DATE,RENT_AMOUNT,SECURITY_DEPOSIT_AMOUNT,PROPERTY_ADDRESS
+0,./datasets/dataset-master/testing/Lease_Agreement_Test1.docx,"September 1, 2008","Tianjin Milk Goat Dairy Co., Ltd.","Tianjin Yayi Industrial Co., Ltd.","August 30, 2029",,,
+1,./datasets/dataset-master/testing/Lease_Agreement_Test10.docx,,"WUXI GUANGZHENG NEW ENERGY CO., LTD","JINKO SOLAR CO., LTD","December 31, 2015","1,200,000.00.",,
+2,./datasets/dataset-master/testing/Lease_Agreement_Test11.docx,"April 1, 2004","SHANGHAI PUDONG REAL ESTATE DEVELOPMENT CO., LTD","MICROSOFT CHINA CO., LTD","March 31, 2009","2,500,000.00.",,
+3,./datasets/dataset-master/testing/Lease_Agreement_Test12.docx,"July 1, 2004",George Feldenkreis,"Supreme International, Inc., a Delaware corporation, its successors, assigns and/or affiliates","June 30, 2014",,,
+4,./datasets/dataset-master/testing/Lease_Agreement_Test13.docx,"20000.00 as a security deposit. This deposit shall be held by the Landlord as security for the faithful performance by the Tenant of all terms, covenants, and conditions of this Agreement.
+4. USE OF PREMISES
+The premises shall be used and occupied by the Tenant exclusively as a private residential dwelling. No part of the premises shall be used for any business or commercial purpose.
+5. UTILITIES
+The Tenant shall be responsible for payment of all utilities and services, including but not limited to electricity, gas, water, sewer, trash removal, cable, and internet services.
+6. MAINTENANCE AND REPAIRS
+The Tenant shall maintain the premises in good, clean, and sanitary condition. The Tenant shall promptly notify the Landlord of any damage, defects, or dangerous conditions on the premises.
+7. ALTERATIONS
+The Tenant shall not make any alterations, additions, or improvements to the premises without the prior written consent of the Landlord.
+8. PETS
+No pets shall be allowed on the premises without the prior written consent of the Landlord. If permission is granted, an additional pet deposit may be required.
+9. SUBLETTING
+The Tenant shall not sublet the premises or any part thereof, nor assign this lease, without the prior written consent of the Landlord.
+10. RIGHT OF ENTRY
+The Landlord reserves the right to enter the premises with reasonable notice (except in cases of emergency) for the purpose of inspection, repairs, or showing the property to prospective tenants or buyers.
+11. TERMINATION
+Upon termination of this lease, the Tenant shall surrender the premises in as good condition as when received, reasonable wear and tear excepted. The Tenant shall remove all personal property and clean the premises thoroughly.
+12. DEFAULT
+If the Tenant fails to pay rent when due or breaches any other term of this Agreement, the Landlord may terminate this lease with proper notice as required by law.
+13. GOVERNING LAW
+This Agreement shall be governed by the laws of the United Kingdom.
+14. ENTIRE AGREEMENT
+This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, or agreements, whether written or oral.
+15. SEVERABILITY
+If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+16. ADDITIONAL TERMS AND CONDITIONS
+[None specified]
+SIGNATURES
+LANDLORD:
+Signature: _________________________________        Date: _____________
+Print Name: MEPC MILTON PARK NO. 1 LIMITED and MEPC MILTON PARK NO. 2 LIMITED
+TENANT:
+Signature: _________________________________        Date: _____________
+Print Name: OXFORD IMMUNOTEC LIMITED
+ACKNOWLEDGMENT
+By signing above, both parties acknowledge that they have read, understood, and agree to be bound by all terms and conditions of this Lease Agreement.",MEPC MILTON PARK NO. 1 LIMITED and MEPC MILTON PARK NO. 2 LIMITED,OXFORD IMMUNOTEC LIMITED,11 June 2019,"£10,932.17",,
+5,./datasets/dataset-master/testing/Lease_Agreement_Test14.docx,,UXIN LIMITED,GLORYFIN INTERNATIONAL GROUP HOLDING COMPANY LIMITED,"December 31, 2023","$50,000","$100,000",
+6,./datasets/dataset-master/testing/Lease_Agreement_Test15.docx,"March 1, 2017",MEPC MILTON PARK NO. 2 LIMITED,ADAPTIMMUNE THERAPEUTICS PLC,"February 28, 2022",,,
+7,./datasets/dataset-master/testing/Lease_Agreement_Test16.docx,,YOUXIN LIMITED,PERFECT HARMONY GROUP LIMITED,"June 9, 2025","$70,000",,
+8,./datasets/dataset-master/testing/Lease_Agreement_Test17.docx,"August 3, 2025",BOYU FINANCING LEASE,KAIFENG FINANCING LEASE,"July 14, 2027","$85,000",,
+9,./datasets/dataset-master/testing/Lease_Agreement_Test18.docx,"August 3, 2025",UCARSHOW HK LIMITED,UCARBUY HOLDING LIMITED,"March 31, 2026","$60,000",,
+10,./datasets/dataset-master/testing/Lease_Agreement_Test19.docx,"commence on May 20, 2019",YOUHAN (SHANGHAI),YOUXINPAI (BEIJING),"May 19, 2024","$72,000",,
+11,./datasets/dataset-master/testing/Lease_Agreement_Test2.docx,commence on Not specified and shall terminate on,Tianjin Changhe Heli Investment Company,Yatai Weilai Technology Development Beijing Branch,"Not specified. This Agreement shall be considered a fixed-term lease.
+
+2. RENT The Tenant agrees to pay the Landlord a monthly rent of",,,
+12,./datasets/dataset-master/testing/Lease_Agreement_Test20.docx,"August 3, 2025",YOUXIN INTERNET (BEIJING),YOUXIN HONG KONG LIMITED,"July 31, 2023","$95,000",,
+13,./datasets/dataset-master/testing/Lease_Agreement_Test21.docx,"August 03, 2025",SICHUAN YOUXINPAI,YOUXINPAI (BEIJING),"September 30, 2021","$58,000",,
+14,./datasets/dataset-master/testing/Lease_Agreement_Test3.docx,,"Hibiscus Office Park, L.L.C.",The Goldfield Corp.,"June 7, 2011","$102,411",,"1684 W. Hibiscus Blvd., Melbourne, FL 32901"
+15,./datasets/dataset-master/testing/Lease_Agreement_Test4.docx,commence on 1 January 2012,CANAL & RIVER TRUST,CTI BILLING SOLUTIONS LIMITED,31 December 2014,,,
+16,./datasets/dataset-master/testing/Lease_Agreement_Test5.docx,,"Rd, Franklin, CA 70457",Sarah Williams,,,,
+17,./datasets/dataset-master/testing/Lease_Agreement_Test6.docx,,BREDBURY LIMITED,WLG (UK) LIMITED,3rd February 2018,"$100,170","$100,170","Unit A, Site 1, Horsfield Way, Bredbury, Stockport
+
+1. TERM OF LEASE The term of this lease shall commence on 4th February 2008"
+18,./datasets/dataset-master/testing/Lease_Agreement_Test7.docx,,"STECAR PROPERTIES, LLC","DIEDRICH COFFEE, INC.","December 31, 2015",,,"11480 Industrial Parkway, Castroville, CA
+
+1. TERM OF LEASE The term of this lease shall commence on January 1, 2006"
+19,./datasets/dataset-master/testing/Lease_Agreement_Test8.docx,,"ZHEJIANG FENGYUAN ENTERPRISE CO., LTD","CHINA TIAN YUAN SPECIALTY CROP TECHNOLOGIES CO., LTD","June 14, 2021",,,
+20,./datasets/dataset-master/testing/Lease_Agreement_Test9.docx,"March 1, 2015","SHENZHEN NEW TAOYUAN INDUSTRIAL CO., LTD","SHENZHEN GUANGRONG ELECTRONIC CO., LTD","February 28, 2020","$600,000.00",,"Building B, No. 3, Gongye East Road, Nanshan District, Shenzhen"
