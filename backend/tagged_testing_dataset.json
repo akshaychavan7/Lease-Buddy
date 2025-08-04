@@ -208,7 +208,10 @@
             "start": 171,
             "end": 192
         },
-        "PROPERTY_ADDRESS": null,
+        "PROPERTY_ADDRESS": {
+            "start": 293,
+            "end": 334
+        },
         "LEASE_START_DATE": {
             "start": 84,
             "end": 99
