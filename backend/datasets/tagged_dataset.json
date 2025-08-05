@@ -1,6 +1,6 @@
 [
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_1.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_1.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -33,7 +33,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_2.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_2.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -66,7 +66,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_3.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_3.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 126,
@@ -99,7 +99,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_4.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_4.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 119,
@@ -132,7 +132,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_5.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_5.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -165,7 +165,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_6.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_6.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -198,7 +198,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_7.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_7.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 126,
@@ -231,7 +231,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_8.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_8.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -264,7 +264,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_9.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_9.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -297,7 +297,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_10.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_10.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -330,7 +330,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_11.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_11.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -363,7 +363,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_12.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_12.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -396,7 +396,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_13.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_13.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -429,7 +429,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_14.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_14.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -462,7 +462,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_15.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_15.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -495,7 +495,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_16.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_16.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -528,7 +528,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_17.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_17.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -561,7 +561,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_18.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_18.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -594,7 +594,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_20.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_20.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -627,7 +627,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_21.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_21.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -660,7 +660,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_22.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_22.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -693,7 +693,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_23.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_23.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -726,7 +726,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_24.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_24.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -759,7 +759,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_25.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_25.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -792,7 +792,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_26.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_26.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -825,7 +825,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_27.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_27.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -858,7 +858,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_28.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_28.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -891,7 +891,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_29.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_29.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -924,7 +924,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_31.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_31.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -957,7 +957,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_32.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_32.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -990,7 +990,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_33.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_33.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1023,7 +1023,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_34.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_34.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -1056,7 +1056,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/Lease_Agreement_35.docx",
+        "file_path": "../datasets/dataset-master/Lease_Agreement_35.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -1089,7 +1089,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_1.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_1.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -1122,7 +1122,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_2.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_2.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -1155,7 +1155,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_3.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_3.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -1188,7 +1188,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_4.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_4.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -1221,7 +1221,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_5.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_5.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -1254,7 +1254,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_6.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_6.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -1287,7 +1287,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_7.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_7.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1320,7 +1320,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_8.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_8.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -1353,7 +1353,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_9.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_9.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -1386,7 +1386,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_10.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_10.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1419,7 +1419,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_11.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_11.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -1452,7 +1452,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_12.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_12.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -1485,7 +1485,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_13.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_13.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -1518,7 +1518,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_14.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_14.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 118,
@@ -1551,7 +1551,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_15.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_15.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 118,
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_16.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_16.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 118,
@@ -1617,7 +1617,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_17.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_17.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 118,
@@ -1650,7 +1650,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_18.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_18.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 118,
@@ -1683,7 +1683,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_19.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_19.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1716,7 +1716,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_20.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_20.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -1749,7 +1749,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_21.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_21.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 123,
@@ -1782,7 +1782,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_22.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_22.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1815,7 +1815,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_23.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_23.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -1848,7 +1848,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_24.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_24.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -1881,7 +1881,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_26.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_26.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 126,
@@ -1914,7 +1914,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_27.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_27.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -1947,7 +1947,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_28.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_28.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -1980,7 +1980,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_29.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_29.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 124,
@@ -2013,7 +2013,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_30.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_30.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -2046,7 +2046,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_31.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_31.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -2079,7 +2079,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/synthetic_lease_35.docx",
+        "file_path": "../datasets/dataset-master/synthetic_lease_35.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 121,
@@ -2112,7 +2112,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd1.docx",
+        "file_path": "../datasets/dataset-master/vsd1.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 114,
@@ -2145,7 +2145,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd2.docx",
+        "file_path": "../datasets/dataset-master/vsd2.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 127,
@@ -2178,7 +2178,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd3.docx",
+        "file_path": "../datasets/dataset-master/vsd3.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
@@ -2211,7 +2211,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd4.docx",
+        "file_path": "../datasets/dataset-master/vsd4.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 125,
@@ -2244,7 +2244,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd6.docx",
+        "file_path": "../datasets/dataset-master/vsd6.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 158,
@@ -2277,7 +2277,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd7.docx",
+        "file_path": "../datasets/dataset-master/vsd7.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 133,
@@ -2310,7 +2310,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd8.docx",
+        "file_path": "../datasets/dataset-master/vsd8.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 120,
@@ -2343,7 +2343,7 @@
         }
     },
     {
-        "file_path": "./datasets/dataset-master/vsd10.docx",
+        "file_path": "../datasets/dataset-master/vsd10.docx",
         "entities": {
             "LESSOR_NAME": {
                 "start": 122,
