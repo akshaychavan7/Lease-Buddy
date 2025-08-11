@@ -56,15 +56,15 @@ models = {
 # Model configurations
 MODEL_CONFIGS = {
     "spacy": {
-        "path": "lease_ner_model",
+        "path": "./spacy/lease_ner_model",
         "type": "spacy"
     },
     "bert": {
-        "path": "legalbert-ner-model-100",
+        "path": "./legalBert/legalbert-ner-model-100",
         "type": "bert"
     },
     "spacy_bert": {
-        "path": "custom_legal_ner_spacy_100",
+        "path": "./spacy_legalBert/custom_legal_ner_spacy_100",
         "type": "spacy_bert"
     }
 }

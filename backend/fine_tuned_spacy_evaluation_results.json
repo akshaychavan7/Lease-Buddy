@@ -1,0 +1,44 @@
+{
+    "LESSOR_NAME": {
+        "total": 21,
+        "true_positives": 16,
+        "precision": 0.762,
+        "recall": 0.762,
+        "f1_score": 0.762
+    },
+    "LESSEE_NAME": {
+        "total": 21,
+        "true_positives": 16,
+        "precision": 0.762,
+        "recall": 0.762,
+        "f1_score": 0.762
+    },
+    "PROPERTY_ADDRESS": {
+        "total": 21,
+        "true_positives": 10,
+        "precision": 0.476,
+        "recall": 0.476,
+        "f1_score": 0.476
+    },
+    "LEASE_START_DATE": {
+        "total": 21,
+        "true_positives": 2,
+        "precision": 0.095,
+        "recall": 0.095,
+        "f1_score": 0.095
+    },
+    "LEASE_END_DATE": {
+        "total": 21,
+        "true_positives": 21,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+    },
+    "SECURITY_DEPOSIT_AMOUNT": {
+        "total": 21,
+        "true_positives": 15,
+        "precision": 0.714,
+        "recall": 0.714,
+        "f1_score": 0.714
+    }
+}
