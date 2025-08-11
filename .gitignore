@@ -139,23 +139,9 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 /uploads
-# Exclude large model files
-backend/spacy/lease_ner_model/
-backend/spacy_legalBert/custom_legal_ner_spacy_100/
-backend/legalBert/legalbert-ner-model-100/
-backend/legalBert/legalbert-ner-model-30/
-backend/bert_lease_ner_model/
+# Exclude virtual environments
 venv/
 venv_new/
-*.safetensors
-*.bin
-*.model
-**/transformer/**
-**/ner/**
-**/tok2vec/**
-**/tagger/**
-**/parser/**
-**/senter/**
 
 # macOS system files
 .DS_Store
