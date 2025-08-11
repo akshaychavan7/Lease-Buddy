@@ -51,14 +51,6 @@ The model is trained to recognize the following lease-related entities:
 5. **attribute_ruler**: Rule-based attribute setting
 6. **lemmatizer**: Rule-based lemmatization
 
-### NER Model Configuration
-- **Architecture**: `spacy.TransitionBasedParser.v2`
-- **Hidden Width**: 64
-- **Maxout Pieces**: 2
-- **Embedding Width**: 96
-- **Encoder Depth**: 4 layers
-- **Window Size**: 1
-
 
 ## Usage
 
@@ -90,11 +82,7 @@ for ent in doc.ents:
 
 ## Training Data
 
-The model was fine-tuned on a dataset of lease agreements and rental contracts, including:
-- Residential lease agreements
-- Commercial lease contracts
-- Rental agreements
-- Various document formats (PDF, DOCX, HTML)
+The model was fine-tuned on a dataset of lease agreements and rental contracts.
 
 ## Evaluation Results
 
@@ -111,13 +99,6 @@ Detailed evaluation results are available in:
 3. **Training Data Size**: Limited to 21 training samples, which may affect generalization
 4. **Domain Specificity**: Optimized for lease documents, may not perform well on other legal documents
 
-## Recommendations for Improvement
-
-1. **Increase Training Data**: Collect more diverse lease documents for training
-2. **Date Format Standardization**: Preprocess dates to consistent formats
-3. **Address Normalization**: Implement address parsing and standardization
-4. **Data Augmentation**: Use techniques to expand the training dataset
-5. **Hyperparameter Tuning**: Optimize model architecture for lease-specific entities
 
 ## Dependencies
 
