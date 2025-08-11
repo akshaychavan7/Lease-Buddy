@@ -37,9 +37,9 @@ Lease-Buddy combines multiple NLP models for entity recognition with both cloud-
 
 ## Models
 
-1. **spaCy Fine-tuned Model**: Transfer learning on lease-specific data
-2. **BERT-based Model**: Transformer architecture with token classification
-3. **spaCy + BERT Model**: Custom model
+1. **[spaCy Fine-tuned Model](./backend/spacy/fine_tuned_NER.ipynb)**: Transfer learning on lease-specific data
+2. **[BERT-based Model - LegalBert](./backend/legalBert/fine_tuned_legalBert.ipynb)**: Transformer architecture with token classification
+3. **[spaCy + BERT Model](./backend/spacy_legalBert/spacy_legalBert.ipynb)**: Custom model
 
 ## Setup
 
