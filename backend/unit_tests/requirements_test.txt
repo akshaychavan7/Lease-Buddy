@@ -1,0 +1,30 @@
+# Test dependencies for Lease Buddy backend unit tests
+
+# Core testing framework
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+
+# FastAPI testing
+httpx>=0.24.0
+fastapi[all]>=0.100.0
+
+# Mocking and testing utilities
+unittest-mock>=1.0.1
+responses>=0.23.0
+
+# Core dependencies (for import testing)
+requests>=2.28.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+
+# Optional dependencies (for integration tests)
+# These are marked as optional since they may not be available in all environments
+# spacy>=3.5.0
+# torch>=2.0.0
+# transformers>=4.20.0
+
+# Development tools
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0 
