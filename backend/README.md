@@ -75,18 +75,17 @@ To use the local LLM feature with Ollama:
 - **Approach**: Fine-tunes existing spaCy pipeline on lease-specific data
 - **Architecture**: CNN-based token-to-vector encoding with transition-based parsing
 
-### 2. **BERT-based Model** (`bert_based_ner.ipynb`)
+### 2. **LegalBERT Model** (`fine_tuned_legalBert.ipynb`)
 - **Technique**: Transformer-based Transfer Learning
 - **Base Model**: `bert-base-uncased`
 - **Approach**: Uses BERT embeddings with token classification head
 - **Architecture**: Bidirectional Transformer with CRF layer
 
-### 3. **BiLSTM-CRF Model** (`bi_lstm_crf_ner.ipynb`)
-- **Technique**: Deep Learning with Sequential Modeling
+### 3. **spacy+ LegalBERT Model** (`spacy_legalBert.ipynb`)
+- **Technique**: Hybrid model
 - **Base Model**: Custom PyTorch implementation
-- **Approach**: Character-level + word-level embeddings with BiLSTM and CRF
-- **Architecture**: Bidirectional LSTM with Conditional Random Fields
-
+- **Approach**: Character-level + context embeddings with LegalBERT
+- **Architecture**: Combination of spacy and transformer model(LegalBERT)
 ## Detailed Comparison
 
 ### **spaCy Fine-tuned Model**
@@ -131,7 +130,7 @@ To use the local LLM feature with Ollama:
 - Complex document understanding tasks
 - When you need robust handling of various text formats
 
-### **BiLSTM-CRF Model**
+### **Hybrid Model**
 
 **Advantages:**
 -  Customizable architecture
@@ -154,7 +153,7 @@ To use the local LLM feature with Ollama:
 
 ## Performance Comparison
 
-| Aspect | spaCy Fine-tuned | BERT-based | BiLSTM-CRF |
+| Aspect | spaCy Fine-tuned | BERT-based | spaCy + LegalBERT |
 |--------|------------------|------------|-------------|
 | **Training Speed** | Fast | Medium | Slow |
 | **Inference Speed** | Very Fast | Medium | Fast |
@@ -219,7 +218,7 @@ All three models are trained to recognize the following entity types:
 Each model saves its trained weights in different formats:
 - **spaCy**: `lease_ner_model/` directory
 - **BERT**: `bert_lease_ner_model/` directory
-- **BiLSTM-CRF**: `bilstm_crf_lease_ner_model.pth` and `bilstm_crf_vocab.pkl`
+- **BiLSTM-CRF**: `bilstm_crf_lease_ner_model.pth` 
 
 ## Analysis Report
 
