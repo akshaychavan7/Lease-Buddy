@@ -138,3 +138,9 @@ Lease-Buddy/
 - **Frontend**: Next.js, React, TypeScript, Tailwind CSS
 - **ML/AI**: BERT(LegalBERT), spaCy, OpenAI API
 - **Infrastructure**: Local LLM (Ollama), Cloud LLM (OpenAI)
+
+## Demo Video
+
+Watch our demo video to see Lease-Buddy in action:
+
+[![Lease-Buddy Demo](https://img.youtube.com/vi/54ngfQ95vQw/maxresdefault.jpg)](https://youtu.be/54ngfQ95vQw?si=rJu5NuB1sTlCbYmJ)
